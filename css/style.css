@@ -4,6 +4,10 @@
     --indigo-link: #4c4fd6;
     --texto-sub: #6b7280;
     --borda: #e5e7eb;
+    --white: #ffffff;
+    --border: #e5e7eb;
+    --text: #1f2937;
+    --primary: #4c4fd6;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -344,7 +348,20 @@ a.link:hover {
     text-decoration: none;
 }
 
+.ver-mais {
+    right: 2em;
+    gap: 0.5rem;
+    color: var(--indigo-escuro);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
 .voltar-login:hover {
+    text-decoration: underline;
+}
+
+.ver-mais:hover {
     text-decoration: underline;
 }
 
@@ -354,4 +371,370 @@ a.link:hover {
     .tagline { font-size: 1.5rem; }
     .opcao-cadastro { width: 100%; max-width: 380px; padding: 2.5rem 2rem; }
     .voltar-login { position: static; margin: 1rem 0 2rem 2rem; }
+}
+
+@media (max-width: 900px) {
+    .conteudo-login { flex-direction: column; }
+    .lado-visual { min-height: 40vh; padding: 3rem 6vw; }
+    .tagline { font-size: 1.5rem; }
+}
+
+.site-header nav a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.conteudo-login {
+    display: flex;
+    flex: 1;
+}
+
+.Pesquisa {
+    width: calc(100% - 104px);
+    height: 190px;
+    margin: 20px auto 0;
+    background-image: url("../assets/Fundo-de-pesquisa.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.tagline {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.1rem;
+    line-height: 1.35;
+    color: var(--white);
+    max-width: 480px;
+}
+
+.tagline-imagem {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 2.8rem;
+    line-height: 1.25;
+    color: #fff;
+    margin: 45px 0 0 30px;
+    max-width: 500px;
+}
+
+.navbar-search {
+    flex: 1;
+    min-width: 170px;
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    background-color: #f8fafc;
+    color: var(--text);
+    font-size: 0.95rem;
+}
+
+.navbar-search-imagem {
+    width: 530px;
+    height: 58px;
+    margin: 35px 0 0 35px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 14px;
+    background: #eef4fc;
+    color: #1f2937;
+    font-size: 16px;
+}
+
+.navbar-search:focus {
+    outline: none;
+    border-color: var(--primary);
+    background-color: var(--white);
+}
+
+.menu-lateral{
+    width: 250px;
+    height: 100vh;
+    background-color: var(--indigo-escuro);
+    position: fixed;
+    color: white;
+    top: 0;
+    right: -250px;
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+}
+
+.menu-lateral.aberto {
+    right: 0;
+}
+
+.btn-toggle{
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.conteudo{
+    padding: 40px;
+    width: 100%;
+}
+
+.btn-fechar {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* ESTILO DA BARRA LATERAL (SIDEBAR) */
+
+/* Fundo escuro atrás do menu */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 998;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* O menu em si */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Começa escondido fora da tela (à direita) */
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 999;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    transition: right 0.3s ease;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Quando o menu está aberto */
+.sidebar.active {
+    right: 0;
+}
+
+/* Botão de fechar (X) */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 24px;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover {
+    color: #1a56db;
+}
+
+/* Foto de Perfil */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #1a56db;
+    padding: 2px;
+    margin-bottom: 15px;
+}
+
+.profile-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.profile-email {
+    font-size: 13px;
+    color: #888;
+}
+
+/* Links de Navegação */
+.nav-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #444;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: all 0.2s;
+}
+
+.nav-links li a i {
+    width: 20px;
+    text-align: center;
+    color: #1a56db;
+    font-size: 18px;
+}
+
+.nav-links li a:hover {
+    background-color: #f0f4ff;
+    color: #1a56db;
+    transform: translateX(5px);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+    .search-bar {
+        order: 3;
+        max-width: 100%;
+        width: 100%;
+    }
+    .hero {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        height: auto;
+    }
+    .hero-search {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+
+
+    .header-icons {
+    display: flex;
+    gap: 20px;
+    color: #1a56db;
+    font-size: 20px;
+    cursor: pointer;
+    align-items: center;
+    }
+}
+
+.event-card{
+    flex-direction: column;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background-color: #f3f3f3;
+    padding: 6px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 16px;
+    width: auto;
+    height: auto;
+    max-width: 285px;
+    max-height: 300px;
+}
+
+.event-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.event-content img {
+    width: auto;
+    height: 100px;
+    max-width: 260px;
+    max-height: 200px;
+    border-radius: 8px;
+}
+
+.titulo-eventos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 52px 5px;
+}
+
+.event-content h1 {
+    margin: 6px 0 2px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #14509a;
+    text-align: center;
+}
+
+.event-content p {
+    margin: 2px 0;
+    font-size: 16px;
+    color: #14509a !important;
+    text-align: center;
+}
+
+.eventos-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 15px 43px;
+}
+
+.titulo-eventos p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #14509a;
+}
+
+.ver-mais {
+    color: #0066ff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 21px;
+    font-weight: 700;
+    text-decoration: none;
 }
