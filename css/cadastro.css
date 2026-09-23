@@ -1,0 +1,123 @@
+.conteudo-cadastro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-height: calc(100vh - 100px);
+    padding-bottom: 5rem;
+    gap: 2rem;
+}
+
+.container-tela {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-centralizado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 24px;
+}
+
+.container-cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    padding: 0 2rem;
+}
+
+.opcao-cadastro {
+    background: #ffffff;
+    border: 1px solid var(--borda);
+    border-radius: 24px;
+    box-shadow: 0 8px 20px rgba(17, 23, 34, 0.06);
+    padding: 3.5rem 3rem;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1.25rem;
+}
+
+.opcao-cadastro .icone-circulo {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: var(--indigo-escuro);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.2rem;
+}
+
+.opcao-cadastro h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: var(--indigo-escuro);
+}
+
+.opcao-cadastro p {
+    color: var(--indigo-escuro);
+    font-weight: 600;
+    font-size: 1.05rem;
+    line-height: 1.5;
+}
+
+.seta-avancar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1.5px solid var(--indigo-escuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--indigo-escuro);
+    text-decoration: none;
+    font-size: 1.3rem;
+    margin-top: 0.25rem;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.seta-avancar:hover {
+    background: var(--indigo-escuro);
+    color: #ffffff;
+}
+
+.voltar-login {
+    position: fixed;
+    left: 2rem;
+    bottom: 2rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--indigo-escuro);
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+.voltar-login:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 900px) {
+    .opcao-cadastro {
+        width: 100%;
+        max-width: 380px;
+        padding: 2.5rem 2rem;
+    }
+
+    .voltar-login {
+        position: static;
+        margin: 1rem 0 2rem 2rem;
+    }
+}

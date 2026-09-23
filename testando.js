@@ -17,7 +17,6 @@ function verificarLogin() { //Ele está definindo a função verificarLogin sem 
     }
 }
 
-// Selecionando os elementos do HTML
 const menuBtn = document.getElementById('menu-btn');
 const closeBtn = document.getElementById('close-btn');
 const sidebar = document.getElementById('sidebar');

@@ -1,0 +1,218 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+}
+
+.menu-lateral {
+    width: 250px;
+    height: 100vh;
+    background-color: #2c3e50;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    display: grid;
+}
+
+.menu-lateral h2 {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.menu-lateral ul {
+    list-style: none;
+}
+
+.menu-lateral ul li {
+    margin: 15px 0;
+}
+
+.menu-lateral ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.menu-lateral ul li a:hover {
+    background-color: #34495e;
+}
+
+.conteudo {
+    display: grid;
+    width: 100%;
+    background-color: #ecf0f1;
+    height: 100vh;
+}
+
+.logo img{
+    height: 80px;
+    width: auto;
+    margin-top: 1rem;
+}
+
+.header-eventos{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 2.5rem;
+    background: var(--borda);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    margin-left: 250px;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
+.navbar-search{
+    width: 530px;
+    height: 58px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 14px;
+    background: #eef4fc;
+    color: #1f2937;
+    font-size: 16px;
+}
+
+.dropdown-container {
+    position: relative;
+    width: 250px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.select-customizado {
+    width: 100%;
+    padding: 12px 40px 12px 16px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.select-customizado:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
+}
+
+.dropdown-container::after {
+    content: "▼";
+    font-size: 12px;
+    color: #777;
+    position: absolute;
+    right: 16px;
+    top: 6%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.select-customizado option {
+    padding: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+.resultados{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 52px 5px;
+}
+
+.resultados p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #14509a;
+}
+
+.event-card {
+    flex-direction: column;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background-color: #f3f3f3;
+    padding: 6px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 16px;
+    width: auto;
+    height: 300px;
+    max-width: 300px;
+    max-height: 350px;
+}
+
+.event-content {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 300px;
+}
+
+.event-content img {
+    width: auto;
+    height: 150px;
+    max-width: 260px;
+    max-height: 200px;
+    border-radius: 8px;
+}
+
+.titulo-eventos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 14px 52px 5px;
+}
+
+.event-content h1 {
+    margin: 6px 0 2px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #14509a;
+    text-align: center;
+}
+
+.event-content p {
+    margin: 2px 0;
+    font-size: 16px;
+    color: #14509a !important;
+    text-align: center;
+}
+
+.eventos-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin: 15px 43px;
+}
+
+.titulo-eventos p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #14509a;
+}

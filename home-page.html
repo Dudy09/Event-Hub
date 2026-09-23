@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar - Event Hub</title>
+    <title>Event Hub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home-page.css">
 </head>
 <body>
 
@@ -14,33 +15,50 @@
         <div class="logo-header">
             <img src="assets/Tipografia-logo-1-com-ingresso-grudado.png" alt="Event Hub">
         </div>
-            <input type="search" id="pesquisa-header" class="navbar-search-imagem" placeholder="Pesquisar...">
-            <div id="overlay" class="overlay"></div>
-            <button id="btn-abrir" class="btn-toggle">☰ Menu</button>
-        <nav id="menu" class="menu-lateral">
-            <button id="btn-fechar" class="btn-fechar">&times;</button> 
-            <a href="index.html">Início</a>
-            <a href="sobre_nos.html">Sobre</a>
-            <a href="#">Contatos</a>
-            <a href="#">Lojas da EventHub</a>
+
+        <input type="search" id="pesquisa-header" class="navbar-search-home" placeholder="Pesquisar...">
+
+        <div id="overlay" class="overlay"></div>
+
+        <button id="menu-btn" class="btn-toggle">☰ Menu</button>
+
+        <nav class="sidebar" id="sidebar">
+            <button id="close-btn" class="btn-toggle">X</button>
+
+            <div class="profile-section">
+                <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/49449605-azul-arara-perfil-com-negrito-caracteristicas-gratis-vetor.jpg" alt="Foto de Perfil" class="profile-pic">
+                <span class="profile-name">Maria Joaquina</span>
+                <span class="profile-email">maria@email.com</span>
+            </div>
+
+            <ul class="nav-links">
+                <li><a href="#"><i class="far fa-user"></i> Conta</a></li>
+                <li><a href="#"><i class="fas fa-home"></i> Início</a></li>
+                <li><a href="#"><i class="fas fa-list"></i> Todos</a></li>
+                <li><a href="#"><i class="fas fa-users"></i> Usuários</a></li>
+                <li><a href="#"><i class="fas fa-building"></i> Empresas</a></li>
+            </ul>
         </nav>
     </header>
 
     <div>
         <div class="Pesquisa">
-        <section class="lado-visual" style="margin-top: 2.5em;">
-            <div class="foto-fundo"></div>
-            <div style="display: flex; margin-top: -6em">
-                <p class="tagline-imagem">Grandes eventos,<br>emoções reais!</p>
-                <div style="margin-top: 1.5em">
-                    <input type="search" id="pesquisa-eventos" class="navbar-search-imagem" placeholder="Pesquisar...">
+            <section class="lado-visual">
+                <div class="foto-fundo"></div>
+
+                <div class="pesquisa-conteudo">
+                    <p class="tagline-imagem">Grandes eventos,<br>emoções reais!</p>
+
+                    <div class="pesquisa-imagem">
+                        <input type="search" id="pesquisa-eventos" class="navbar-search-imagem" placeholder="Pesquisar...">
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         </div>
+
         <div class="titulo-eventos">
             <p>Principais eventos</p>
-            <a href="Todos-eventos.html" class="ver-mais">Ver mais →</a>
+            <a href="pagina-eventos.html" class="ver-mais">Ver mais →</a>
         </div>
     </div>
 
@@ -48,50 +66,87 @@
 
         <div class="event-card">
             <div class="event-content">
-                <img src="assets/Fundo-de-pesquisa-inteiro.png" alt="Event Hub" class="">
-                <div style="display: grid; justify-content: center; align-items: center;">
+                <img src="assets/Fundo-de-pesquisa-inteiro.png" alt="Event Hub">
+                <div class="event-info">
                     <h1>Show do Coldplay</h1>
-                    <p style="color: #000">Música - SP</p>
-                    <p style="color: #000">12.set. 2025</p>
+                    <p>Música - SP</p>
+                    <p>12.set. 2025</p>
                 </div>
             </div>
         </div>
 
         <div class="event-card">
             <div class="event-content">
-                <img src="assets/Fundo-de-pesquisa-inteiro.png" alt="Event Hub" class="">
-                <div style="display: grid; justify-content: center; align-items: center;">
+                <img src="assets/Fundo-de-pesquisa-inteiro.png" alt="Event Hub">
+                <div class="event-info">
                     <h1>Show do Coldplay</h1>
-                    <p style="color: #000">Música - SP</p>
-                    <p style="color: #000">12.set. 2025</p>
+                    <p>Música - SP</p>
+                    <p>12.set. 2025</p>
                 </div>
             </div>
         </div>
 
         <div class="event-card">
             <div class="event-content">
-                <img src="assets/Fundo-de-pesquisa-inteiro.png" alt="Event Hub" class="">
-                <div style="display: grid; justify-content: center; align-items: center;">
+                <img src="assets/Fundo-de-pesquisa-inteiro.png" alt="Event Hub">
+                <div class="event-info">
                     <h1>Show do Coldplay</h1>
-                    <p style="color: #000">Música - SP</p>
-                    <p style="color: #000">12.set. 2025</p>
+                    <p>Música - SP</p>
+                    <p>12.set. 2025</p>
                 </div>
             </div>
         </div>
 
         <div class="event-card">
             <div class="event-content">
-                <img src="assets/Fundo-de-pesquisa-inteiro.png" alt="Event Hub" class="">
-                <div style="display: grid; justify-content: center; align-items: center;">
+                <img src="assets/Fundo-de-pesquisa-inteiro.png" alt="Event Hub">
+                <div class="event-info">
                     <h1>Show do Coldplay</h1>
-                    <p style="color: #000">Música - SP</p>
-                    <p style="color: #000">12.set. 2025</p>
+                    <p>Música - SP</p>
+                    <p>12.set. 2025</p>
                 </div>
             </div>
         </div>
 
     </div>
-    
+
+    <footer class="baixo">
+        <hr>
+
+        <div class="footer-title">
+            <h2><strong>Informações</strong></h2>
+        </div>
+
+        <main class="footer-content">
+
+            <article class="cartão">
+                <p class="footer-heading">Participe:<br></p>
+                <p class="sub_titulo">Crie seu perfil musical<br></p>
+                <p class="sub_titulo">Envie suas duvidas<br></p>
+                <p class="sub_titulo">Envie postagens<br></p>
+                <p class="sub_titulo">Correções de postagens<br></p>
+            </article>
+
+            <article class="cartão">
+                <p class="footer-heading">Sobre o site:<br></p>
+                <p class="sub_titulo">Ajuda<br></p>
+                <p class="sub_titulo">Termos de uso e privacidade<br></p>
+                <p class="sub_titulo">Sobre postagens<br></p>
+                <p class="sub_titulo">Padrões para envios<br></p>
+            </article>
+
+            <article class="cartão">
+                <p class="footer-heading">Nosso site:<br></p>
+                <p class="sub_titulo">Página inicial<br></p>
+                <p class="sub_titulo">Lista de postagens<br></p>
+                <p class="sub_titulo">Envie sugestôes<br></p>
+            </article>
+
+        </main>
+
+        <h3 class="footer-copyright"><strong>© 2026 Todos os direitos reservados a Event-hub</strong></h3>
+    </footer>
+
     <script src="testando.js"></script>
 </body>
-</html> 
+</html>

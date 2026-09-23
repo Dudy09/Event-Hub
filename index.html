@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
 
@@ -23,50 +24,49 @@
     </header>
 
     <div class="conteudo-login">
+        <section class="lado-visual">
+            <div class="foto-fundo"></div>
 
-    <section class="lado-visual">
-        <div class="foto-fundo"></div>
-
-        <div class="logo">
-            <img src="assets/Tipografia-logo-1-com-ingresso-grudado.png" alt="Event Hub">
-        </div>
-
-        <p class="tagline">Grandes eventos,<br>emoções reais!</p>
-    </section>
-
-    <section class="lado-form">
-        <div class="card-login">
-            <h1>Entrar</h1>
-            <p class="subtitulo">Acesse sua conta para continuar</p>
-
-            <div class="campo">
-                <i class="fas fa-user"></i>
-                <input type="text" id="usuario" placeholder="E-mail ou CPF" required>
+            <div class="logo">
+                <img src="assets/Tipografia-logo-1-com-ingresso-grudado.png" alt="Event Hub">
             </div>
 
-            <div class="campo">
-                <i class="fas fa-lock"></i>
-                <input type="password" id="senha" placeholder="Senha" required>
-                <button type="button" class="toggle-senha" id="btn-toggle-senha">
-                    <i class="fas fa-eye" id="icone-olho"></i>
-                </button>
+            <p class="tagline">Grandes eventos,<br>emoções reais!</p>
+        </section>
+
+        <section class="lado-form">
+            <div class="card-login">
+                <h1>Entrar</h1>
+                <p class="subtitulo">Acesse sua conta para continuar</p>
+
+                <div class="campo">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="usuario" placeholder="E-mail ou CPF" required>
+                </div>
+
+                <div class="campo">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="senha" placeholder="Senha" required>
+                    <button type="button" class="toggle-senha" id="btn-toggle-senha">
+                        <i class="fas fa-eye" id="icone-olho"></i>
+                    </button>
+                </div>
+
+                <div class="linha-opcoes">
+                    <label class="lembrar">
+                        <input type="checkbox" id="lembrar">
+                        Lembrar de mim
+                    </label>
+                    <a href="#" class="link">Esqueceu a senha?</a>
+                </div>
+
+                <button type="button" class="btn-entrar" onclick="verificarLogin()">Entrar</button>
+
+                <p class="rodape-card">Não tem uma conta? <a href="cadastro.html" class="link">Cadastre-se</a></p>
             </div>
-
-            <div class="linha-opcoes">
-                <label class="lembrar">
-                    <input type="checkbox" id="lembrar">
-                    Lembrar de mim
-                </label>
-                <a href="#" class="link">Esqueceu a senha?</a>
-            </div>
-
-            <button type="button" class="btn-entrar" onclick="verificarLogin()">Entrar</button>
-
-            <p class="rodape-card">Não tem uma conta? <a href="cadastro.html" class="link">Cadastre-se</a></p>
-        </div>
-    </section>
-
+        </section>
     </div>
+
     <script src="testando.js"></script>
 </body>
 </html>
