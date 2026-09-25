@@ -1,0 +1,565 @@
+[
+  {
+    "id": "Coldplay",
+    "nome": "Show do Coldplay",
+    "valor_botao": "Coldplay",
+    "categoria_principal": "Música",
+    "informacoes": {
+      "informacoes_local": {
+        "cidade": "São Paulo",
+        "estado": "São Paulo - SP",
+        "local": "Nubank Parque"
+      },
+      "informacoes_data": {
+        "data_reduzida": "12.set. 2025",
+        "data_completo": "12 de Setembro de 2025",
+        "horario": "21:00"
+      },
+      "informacoes_gerais": {
+        "duracao": "3h.",
+        "classificacao": "16 anos.",
+        "descricao": "A banda Coldplay retorna ao Brasil com a sua nova turnê, trazendo um show inesquecível e grandes sucessos."
+      }
+    },
+    "tags": {
+      "primeira_tag": "Música",
+      "segunda_tag": "Festival",
+      "terceira_tag": "",
+      "quarta_tag": "",
+      "quinta_tag": ""
+    },
+    "ingressos": [
+      { "setor": "Pista Premium", "preco": 800 },
+      { "setor": "Pista Comum", "preco": 450 },
+      { "setor": "Cadeira Superior", "preco": 250 },
+      { "setor": "Meia Entrada", "preco": 180 }
+    ],
+    "organizador": {
+      "nome": "Live Nation",
+      "link": "ver_empresa.html",
+      "estrelas": "4.8",
+      "avaliacoes": "12 avaliações"
+    },
+    "imagem": {
+      "imagem_exibicao": "assets/Fundo-de-pesquisa-inteiro.png",
+      "imagem_fundo": "assets/fundo-detalhes-coldplay.png"
+    }
+  },
+
+  {
+    "id": "Coldplay",
+    "nome": "Show do Coldplay",
+    "valor_botao": "Coldplay",
+    "categoria_principal": "Música",
+    "informacoes": {
+      "informacoes_local": {
+        "cidade": "São Paulo",
+        "estado": "São Paulo - SP",
+        "local": "Nubank Parque"
+      },
+      "informacoes_data": {
+        "data_reduzida": "12.set. 2025",
+        "data_completo": "12 de Setembro de 2025",
+        "horario": "21:00"
+      },
+      "informacoes_gerais": {
+        "duracao": "3h.",
+        "classificacao": "16 anos.",
+        "descricao": "A banda Coldplay retorna ao Brasil com a sua nova turnê, trazendo um show inesquecível e grandes sucessos."
+      }
+    },
+    "tags": {
+      "primeira_tag": "Música",
+      "segunda_tag": "Festival",
+      "terceira_tag": "",
+      "quarta_tag": "",
+      "quinta_tag": ""
+    },
+    "ingressos": [
+      { "setor": "Pista Premium", "preco": 800 },
+      { "setor": "Pista Comum", "preco": 450 },
+      { "setor": "Cadeira Superior", "preco": 250 },
+      { "setor": "Meia Entrada", "preco": 180 }
+    ],
+    "organizador": {
+      "nome": "Live Nation",
+      "link": "ver_empresa.html",
+      "estrelas": "4.8",
+      "avaliacoes": "12 avaliações"
+    },
+    "imagem": {
+      "imagem_exibicao": "assets/Fundo-de-pesquisa-inteiro.png",
+      "imagem_fundo": "assets/fundo-detalhes-coldplay.png"
+    }
+  },
+
+  {
+    "id": "Coldplay",
+    "nome": "Show do Coldplay",
+    "valor_botao": "Coldplay",
+    "categoria_principal": "Música",
+    "informacoes": {
+      "informacoes_local": {
+        "cidade": "São Paulo",
+        "estado": "São Paulo - SP",
+        "local": "Nubank Parque"
+      },
+      "informacoes_data": {
+        "data_reduzida": "12.set. 2025",
+        "data_completo": "12 de Setembro de 2025",
+        "horario": "21:00"
+      },
+      "informacoes_gerais": {
+        "duracao": "3h.",
+        "classificacao": "16 anos.",
+        "descricao": "A banda Coldplay retorna ao Brasil com a sua nova turnê, trazendo um show inesquecível e grandes sucessos."
+      }
+    },
+    "tags": {
+      "primeira_tag": "Música",
+      "segunda_tag": "Festival",
+      "terceira_tag": "",
+      "quarta_tag": "",
+      "quinta_tag": ""
+    },
+    "ingressos": [
+      { "setor": "Pista Premium", "preco": 800 },
+      { "setor": "Pista Comum", "preco": 450 },
+      { "setor": "Cadeira Superior", "preco": 250 },
+      { "setor": "Meia Entrada", "preco": 180 }
+    ],
+    "organizador": {
+      "nome": "Live Nation",
+      "link": "ver_empresa.html",
+      "estrelas": "4.8",
+      "avaliacoes": "12 avaliações"
+    },
+    "imagem": {
+      "imagem_exibicao": "assets/Fundo-de-pesquisa-inteiro.png",
+      "imagem_fundo": "assets/fundo-detalhes-coldplay.png"
+    }
+  },
+
+  {
+    "id": "Coldplay",
+    "nome": "Show do Coldplay",
+    "valor_botao": "Coldplay",
+    "categoria_principal": "Música",
+    "informacoes": {
+      "informacoes_local": {
+        "cidade": "São Paulo",
+        "estado": "São Paulo - SP",
+        "local": "Nubank Parque"
+      },
+      "informacoes_data": {
+        "data_reduzida": "12.set. 2025",
+        "data_completo": "12 de Setembro de 2025",
+        "horario": "21:00"
+      },
+      "informacoes_gerais": {
+        "duracao": "3h.",
+        "classificacao": "16 anos.",
+        "descricao": "A banda Coldplay retorna ao Brasil com a sua nova turnê, trazendo um show inesquecível e grandes sucessos."
+      }
+    },
+    "tags": {
+      "primeira_tag": "Música",
+      "segunda_tag": "Festival",
+      "terceira_tag": "",
+      "quarta_tag": "",
+      "quinta_tag": ""
+    },
+    "ingressos": [
+      { "setor": "Pista Premium", "preco": 800 },
+      { "setor": "Pista Comum", "preco": 450 },
+      { "setor": "Cadeira Superior", "preco": 250 },
+      { "setor": "Meia Entrada", "preco": 180 }
+    ],
+    "organizador": {
+      "nome": "Live Nation",
+      "link": "ver_empresa.html",
+      "estrelas": "4.8",
+      "avaliacoes": "12 avaliações"
+    },
+    "imagem": {
+      "imagem_exibicao": "assets/Fundo-de-pesquisa-inteiro.png",
+      "imagem_fundo": "assets/fundo-detalhes-coldplay.png"
+    }
+  },
+
+  {
+    "id": "Coldplay",
+    "nome": "Show do Coldplay",
+    "valor_botao": "Coldplay",
+    "categoria_principal": "Música",
+    "informacoes": {
+      "informacoes_local": {
+        "cidade": "São Paulo",
+        "estado": "São Paulo - SP",
+        "local": "Nubank Parque"
+      },
+      "informacoes_data": {
+        "data_reduzida": "12.set. 2025",
+        "data_completo": "12 de Setembro de 2025",
+        "horario": "21:00"
+      },
+      "informacoes_gerais": {
+        "duracao": "3h.",
+        "classificacao": "16 anos.",
+        "descricao": "A banda Coldplay retorna ao Brasil com a sua nova turnê, trazendo um show inesquecível e grandes sucessos."
+      }
+    },
+    "tags": {
+      "primeira_tag": "Música",
+      "segunda_tag": "Festival",
+      "terceira_tag": "",
+      "quarta_tag": "",
+      "quinta_tag": ""
+    },
+    "ingressos": [
+      { "setor": "Pista Premium", "preco": 800 },
+      { "setor": "Pista Comum", "preco": 450 },
+      { "setor": "Cadeira Superior", "preco": 250 },
+      { "setor": "Meia Entrada", "preco": 180 }
+    ],
+    "organizador": {
+      "nome": "Live Nation",
+      "link": "ver_empresa.html",
+      "estrelas": "4.8",
+      "avaliacoes": "12 avaliações"
+    },
+    "imagem": {
+      "imagem_exibicao": "assets/Fundo-de-pesquisa-inteiro.png",
+      "imagem_fundo": "assets/fundo-detalhes-coldplay.png"
+    }
+  },
+
+  {
+    "id": "Coldplay",
+    "nome": "Show do Coldplay",
+    "valor_botao": "Coldplay",
+    "categoria_principal": "Música",
+    "informacoes": {
+      "informacoes_local": {
+        "cidade": "São Paulo",
+        "estado": "São Paulo - SP",
+        "local": "Nubank Parque"
+      },
+      "informacoes_data": {
+        "data_reduzida": "12.set. 2025",
+        "data_completo": "12 de Setembro de 2025",
+        "horario": "21:00"
+      },
+      "informacoes_gerais": {
+        "duracao": "3h.",
+        "classificacao": "16 anos.",
+        "descricao": "A banda Coldplay retorna ao Brasil com a sua nova turnê, trazendo um show inesquecível e grandes sucessos."
+      }
+    },
+    "tags": {
+      "primeira_tag": "Música",
+      "segunda_tag": "Festival",
+      "terceira_tag": "",
+      "quarta_tag": "",
+      "quinta_tag": ""
+    },
+    "ingressos": [
+      { "setor": "Pista Premium", "preco": 800 },
+      { "setor": "Pista Comum", "preco": 450 },
+      { "setor": "Cadeira Superior", "preco": 250 },
+      { "setor": "Meia Entrada", "preco": 180 }
+    ],
+    "organizador": {
+      "nome": "Live Nation",
+      "link": "ver_empresa.html",
+      "estrelas": "4.8",
+      "avaliacoes": "12 avaliações"
+    },
+    "imagem": {
+      "imagem_exibicao": "assets/Fundo-de-pesquisa-inteiro.png",
+      "imagem_fundo": "assets/fundo-detalhes-coldplay.png"
+    }
+  },
+
+  {
+    "id": "Coldplay",
+    "nome": "Show do Coldplay",
+    "valor_botao": "Coldplay",
+    "categoria_principal": "Música",
+    "informacoes": {
+      "informacoes_local": {
+        "cidade": "São Paulo",
+        "estado": "São Paulo - SP",
+        "local": "Nubank Parque"
+      },
+      "informacoes_data": {
+        "data_reduzida": "12.set. 2025",
+        "data_completo": "12 de Setembro de 2025",
+        "horario": "21:00"
+      },
+      "informacoes_gerais": {
+        "duracao": "3h.",
+        "classificacao": "16 anos.",
+        "descricao": "A banda Coldplay retorna ao Brasil com a sua nova turnê, trazendo um show inesquecível e grandes sucessos."
+      }
+    },
+    "tags": {
+      "primeira_tag": "Música",
+      "segunda_tag": "Festival",
+      "terceira_tag": "",
+      "quarta_tag": "",
+      "quinta_tag": ""
+    },
+    "ingressos": [
+      { "setor": "Pista Premium", "preco": 800 },
+      { "setor": "Pista Comum", "preco": 450 },
+      { "setor": "Cadeira Superior", "preco": 250 },
+      { "setor": "Meia Entrada", "preco": 180 }
+    ],
+    "organizador": {
+      "nome": "Live Nation",
+      "link": "ver_empresa.html",
+      "estrelas": "4.8",
+      "avaliacoes": "12 avaliações"
+    },
+    "imagem": {
+      "imagem_exibicao": "assets/Fundo-de-pesquisa-inteiro.png",
+      "imagem_fundo": "assets/fundo-detalhes-coldplay.png"
+    }
+  },
+
+  {
+    "id": "Coldplay",
+    "nome": "Show do Coldplay",
+    "valor_botao": "Coldplay",
+    "categoria_principal": "Música",
+    "informacoes": {
+      "informacoes_local": {
+        "cidade": "São Paulo",
+        "estado": "São Paulo - SP",
+        "local": "Nubank Parque"
+      },
+      "informacoes_data": {
+        "data_reduzida": "12.set. 2025",
+        "data_completo": "12 de Setembro de 2025",
+        "horario": "21:00"
+      },
+      "informacoes_gerais": {
+        "duracao": "3h.",
+        "classificacao": "16 anos.",
+        "descricao": "A banda Coldplay retorna ao Brasil com a sua nova turnê, trazendo um show inesquecível e grandes sucessos."
+      }
+    },
+    "tags": {
+      "primeira_tag": "Música",
+      "segunda_tag": "Festival",
+      "terceira_tag": "",
+      "quarta_tag": "",
+      "quinta_tag": ""
+    },
+    "ingressos": [
+      { "setor": "Pista Premium", "preco": 800 },
+      { "setor": "Pista Comum", "preco": 450 },
+      { "setor": "Cadeira Superior", "preco": 250 },
+      { "setor": "Meia Entrada", "preco": 180 }
+    ],
+    "organizador": {
+      "nome": "Live Nation",
+      "link": "ver_empresa.html",
+      "estrelas": "4.8",
+      "avaliacoes": "12 avaliações"
+    },
+    "imagem": {
+      "imagem_exibicao": "assets/Fundo-de-pesquisa-inteiro.png",
+      "imagem_fundo": "assets/fundo-detalhes-coldplay.png"
+    }
+  },
+  
+  {
+    "id": "Coldplay",
+    "nome": "Show do Coldplay",
+    "valor_botao": "Coldplay",
+    "categoria_principal": "Música",
+    "informacoes": {
+      "informacoes_local": {
+        "cidade": "São Paulo",
+        "estado": "São Paulo - SP",
+        "local": "Nubank Parque"
+      },
+      "informacoes_data": {
+        "data_reduzida": "12.set. 2025",
+        "data_completo": "12 de Setembro de 2025",
+        "horario": "21:00"
+      },
+      "informacoes_gerais": {
+        "duracao": "3h.",
+        "classificacao": "16 anos.",
+        "descricao": "A banda Coldplay retorna ao Brasil com a sua nova turnê, trazendo um show inesquecível e grandes sucessos."
+      }
+    },
+    "tags": {
+      "primeira_tag": "Música",
+      "segunda_tag": "Festival",
+      "terceira_tag": "",
+      "quarta_tag": "",
+      "quinta_tag": ""
+    },
+    "ingressos": [
+      { "setor": "Pista Premium", "preco": 800 },
+      { "setor": "Pista Comum", "preco": 450 },
+      { "setor": "Cadeira Superior", "preco": 250 },
+      { "setor": "Meia Entrada", "preco": 180 }
+    ],
+    "organizador": {
+      "nome": "Live Nation",
+      "link": "ver_empresa.html",
+      "estrelas": "4.8",
+      "avaliacoes": "12 avaliações"
+    },
+    "imagem": {
+      "imagem_exibicao": "assets/Fundo-de-pesquisa-inteiro.png",
+      "imagem_fundo": "assets/fundo-detalhes-coldplay.png"
+    }
+  },
+
+  {
+    "id": "Coldplay",
+    "nome": "Show do Coldplay",
+    "valor_botao": "Coldplay",
+    "categoria_principal": "Música",
+    "informacoes": {
+      "informacoes_local": {
+        "cidade": "São Paulo",
+        "estado": "São Paulo - SP",
+        "local": "Nubank Parque"
+      },
+      "informacoes_data": {
+        "data_reduzida": "12.set. 2025",
+        "data_completo": "12 de Setembro de 2025",
+        "horario": "21:00"
+      },
+      "informacoes_gerais": {
+        "duracao": "3h.",
+        "classificacao": "16 anos.",
+        "descricao": "A banda Coldplay retorna ao Brasil com a sua nova turnê, trazendo um show inesquecível e grandes sucessos."
+      }
+    },
+    "tags": {
+      "primeira_tag": "Música",
+      "segunda_tag": "Festival",
+      "terceira_tag": "",
+      "quarta_tag": "",
+      "quinta_tag": ""
+    },
+    "ingressos": [
+      { "setor": "Pista Premium", "preco": 800 },
+      { "setor": "Pista Comum", "preco": 450 },
+      { "setor": "Cadeira Superior", "preco": 250 },
+      { "setor": "Meia Entrada", "preco": 180 }
+    ],
+    "organizador": {
+      "nome": "Live Nation",
+      "link": "ver_empresa.html",
+      "estrelas": "4.8",
+      "avaliacoes": "12 avaliações"
+    },
+    "imagem": {
+      "imagem_exibicao": "assets/Fundo-de-pesquisa-inteiro.png",
+      "imagem_fundo": "assets/fundo-detalhes-coldplay.png"
+    }
+  },
+
+  {
+    "id": "Coldplay",
+    "nome": "Show do Coldplay",
+    "valor_botao": "Coldplay",
+    "categoria_principal": "Música",
+    "informacoes": {
+      "informacoes_local": {
+        "cidade": "São Paulo",
+        "estado": "São Paulo - SP",
+        "local": "Nubank Parque"
+      },
+      "informacoes_data": {
+        "data_reduzida": "12.set. 2025",
+        "data_completo": "12 de Setembro de 2025",
+        "horario": "21:00"
+      },
+      "informacoes_gerais": {
+        "duracao": "3h.",
+        "classificacao": "16 anos.",
+        "descricao": "A banda Coldplay retorna ao Brasil com a sua nova turnê, trazendo um show inesquecível e grandes sucessos."
+      }
+    },
+    "tags": {
+      "primeira_tag": "Música",
+      "segunda_tag": "Festival",
+      "terceira_tag": "",
+      "quarta_tag": "",
+      "quinta_tag": ""
+    },
+    "ingressos": [
+      { "setor": "Pista Premium", "preco": 800 },
+      { "setor": "Pista Comum", "preco": 450 },
+      { "setor": "Cadeira Superior", "preco": 250 },
+      { "setor": "Meia Entrada", "preco": 180 }
+    ],
+    "organizador": {
+      "nome": "Live Nation",
+      "link": "ver_empresa.html",
+      "estrelas": "4.8",
+      "avaliacoes": "12 avaliações"
+    },
+    "imagem": {
+      "imagem_exibicao": "assets/Fundo-de-pesquisa-inteiro.png",
+      "imagem_fundo": "assets/fundo-detalhes-coldplay.png"
+    }
+  },
+
+  {
+    "id": "Coldplay",
+    "nome": "Show do Coldplay",
+    "valor_botao": "Coldplay",
+    "categoria_principal": "Música",
+    "informacoes": {
+      "informacoes_local": {
+        "cidade": "São Paulo",
+        "estado": "São Paulo - SP",
+        "local": "Nubank Parque"
+      },
+      "informacoes_data": {
+        "data_reduzida": "12.set. 2025",
+        "data_completo": "12 de Setembro de 2025",
+        "horario": "21:00"
+      },
+      "informacoes_gerais": {
+        "duracao": "3h.",
+        "classificacao": "16 anos.",
+        "descricao": "A banda Coldplay retorna ao Brasil com a sua nova turnê, trazendo um show inesquecível e grandes sucessos."
+      }
+    },
+    "tags": {
+      "primeira_tag": "Música",
+      "segunda_tag": "Festival",
+      "terceira_tag": "",
+      "quarta_tag": "",
+      "quinta_tag": ""
+    },
+    "ingressos": [
+      { "setor": "Pista Premium", "preco": 800 },
+      { "setor": "Pista Comum", "preco": 450 },
+      { "setor": "Cadeira Superior", "preco": 250 },
+      { "setor": "Meia Entrada", "preco": 180 }
+    ],
+    "organizador": {
+      "nome": "Live Nation",
+      "link": "ver_empresa.html",
+      "estrelas": "4.8",
+      "avaliacoes": "12 avaliações"
+    },
+    "imagem": {
+      "imagem_exibicao": "assets/Fundo-de-pesquisa-inteiro.png",
+      "imagem_fundo": "assets/fundo-detalhes-coldplay.png"
+    }
+  }
+]

@@ -1,13 +1,15 @@
 :root {
     --indigo-escuro: #2c1e6b;
     --indigo-botao: #2e1f8c;
+    --botao: #14498f;
     --indigo-link: #4c4fd6;
     --texto-sub: #6b7280;
-    --borda: #e5e7eb;
+    --borda: #fff;
     --white: #ffffff;
     --border: #e5e7eb;
     --text: #1f2937;
     --primary: #4c4fd6;
+    --tags: #bbd8f9;
 }
 
 * {
@@ -17,7 +19,7 @@
 }
 
 body {
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Poppins', sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalhes do Evento</title>
+</head>
+<body>
+    <button onclick="window.history.back()">← Voltar</button>
+    
+    <img id="detalhe-imagem-fundo" src="" alt="Banner do Evento" style="width:100%; max-height:300px; object-fit:cover;">
+    
+    <h1 id="detalhe-nome">Carregando...</h1>
+    <p id="detalhe-data-hora"></p>
+    <p id="detalhe-local"></p>
+    <p id="detalhe-descricao"></p>
+
+    <div class="bloco-ingresso">
+        <h3>Ingressos a partir de</h3>
+        <!-- O menor preço será inserido aqui -->
+        <h2 id="detalhe-preco"></h2> 
+        <button id="detalhe-btn-comprar">Comprar Ingressos</button>
+    </div>
+
+    <div class="bloco-organizador">
+        <h3>Organizador</h3>
+        <p id="detalhe-organizador-nome"></p>
+        <span id="detalhe-organizador-avaliacao"></span>
+    </div>
+
+    <!-- Vincula o script que vai preencher esta página -->
+    <script src="Funcoes/carregar_detalhes.js"></script>
+</body>
+</html>

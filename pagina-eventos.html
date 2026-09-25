@@ -6,7 +6,7 @@
     <title>Menu Lateral</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pagina-eventos.css">
-
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -23,13 +23,13 @@
         </ul>
     </aside>
 
-    <main style="margin-left: 250px;">
+    <main style="margin-left: 302px;">
         <header class="header-eventos">
             <input type="search" id="pesquisa-header" class="navbar-search" placeholder="Pesquisar...">
 
         </header>
 
-        <main class="conteudo" style="margin-top: 82px;">
+        <main class="conteudo">
             
             <div style="padding: 25px; display: flex; justify-content: space-evenly;">
                 <div class="dropdown-container">
@@ -61,12 +61,13 @@
             </div>
 
             <div class="resultados">
-                <p>Todos os eventos</p>
+                <h1>Todos os eventos</h1>
                 <p>Resultados: 48</p>
             </div>
 
-            <div class="eventos-container">
+    <div class="eventos-container" id="container-eventos">
 
+    <!-- template
         <div class="event-card">
             <div class="event-content">
                 <img src="assets/Fundo-de-pesquisa-inteiro.png" alt="Event Hub">
@@ -74,31 +75,12 @@
                     <h1>Show do Coldplay</h1>
                     <p>Música - SP</p>
                     <p>12.set. 2025</p>
+                    <button type="button" class="mais-detalhes" onclick="verificar_evento(this)" id="Coldplay" value="Coldplay">Ver Detalhes</button>
+                    <input type="text" style="display: none;"></input>
                 </div>
             </div>
         </div>
-
-        <div class="event-card">
-            <div class="event-content">
-                <img src="assets/Fundo-de-pesquisa-inteiro.png" alt="Event Hub">
-                <div class="event-info">
-                    <h1>Show do Coldplay</h1>
-                    <p>Música - SP</p>
-                    <p>12.set. 2025</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="event-card">
-            <div class="event-content">
-                <img src="assets/Fundo-de-pesquisa-inteiro.png" alt="Event Hub">
-                <div class="event-info">
-                    <h1>Show do Coldplay</h1>
-                    <p>Música - SP</p>
-                    <p>12.set. 2025</p>
-                </div>
-            </div>
-        </div>
+    -->
 
     </div>
 
@@ -141,6 +123,8 @@
             <h3 class="footer-copyright"><strong>© 2026 Todos os direitos reservados a Event-hub</strong></h3>
         </footer>
     </main>
+
+    <script src="funcoes/mais_detalhe.js"></script>
 
 </body>
 </html>
