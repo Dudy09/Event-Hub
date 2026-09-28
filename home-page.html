@@ -8,39 +8,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/home-page.css">
+    <link rel="icon" type="image/x-icon" href="assets/12px.png">
 </head>
 <body>
 
     <header class="site-header">
+
+        <button onclick="window.history.back()" style="background: none; border: none; width: 80px;"> 
+        <p style="font-size: 24px;"> ← </p>
+        </button>
+
         <div class="logo-header">
             <img src="assets/Tipografia-logo-1-com-ingresso-grudado.png" alt="Event Hub">
         </div>
 
-        <input type="search" id="pesquisa-header" class="navbar-search-home" placeholder="Pesquisar...">
+        <!-- <input type="search" id="pesquisa-header" class="navbar-search-home" placeholder="Pesquisar..."> -->
 
-        <div id="overlay" class="overlay"></div>
+        <article>
 
-        <button id="menu-btn" class="btn-toggle">☰ Menu</button>
+            <img src="assets/icon_notificacao.png" style="width: 35px; height: 35px;">
 
-        <nav class="sidebar" id="sidebar">
-            <button id="close-btn" class="btn-toggle">X</button>
+            <div id="overlay" class="overlay"></div>
 
-            <div class="profile-section">
-                <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/49449605-azul-arara-perfil-com-negrito-caracteristicas-gratis-vetor.jpg" alt="Foto de Perfil" class="profile-pic">
-                <span class="profile-name">Maria Joaquina</span>
-                <span class="profile-email">maria@email.com</span>
-            </div>
+            <button id="menu-btn" class="btn-toggle">☰ Menu</button>
 
-            <ul class="nav-links">
-                <li><a href="#"><i class="far fa-user"></i> Conta</a></li>
-                <li><a href="#"><i class="fas fa-home"></i> Início</a></li>
-                <li><a href="#"><i class="fas fa-list"></i> Todos</a></li>
-                <li><a href="#"><i class="fas fa-users"></i> Usuários</a></li>
-                <li><a href="#"><i class="fas fa-building"></i> Empresas</a></li>
-            </ul>
-        </nav>
+            <nav class="sidebar" id="sidebar">
+                <button id="close-btn" class="btn-toggle">X</button>
+
+                <div class="profile-section">
+                    <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/49449605-azul-arara-perfil-com-negrito-caracteristicas-gratis-vetor.jpg" alt="Foto de Perfil" class="profile-pic">
+                    <span class="profile-name">Maria Joaquina</span>
+                    <span class="profile-email">maria@email.com</span>
+                </div>
+
+                <ul class="nav-links">
+                    <li><a href="#"><i class="far fa-user"></i> Conta</a></li>
+                    <li><a href="#"><i class="fas fa-home"></i> Início</a></li>
+                    <li><a href="#"><i class="fas fa-list"></i> Todos</a></li>
+                    <li><a href="#"><i class="fas fa-users"></i> Usuários</a></li>
+                    <li><a href="#"><i class="fas fa-building"></i> Empresas</a></li>
+                </ul>
+            </nav>
+        </article>
     </header>
 
+<main style="background-color: var(--white);">
     <div>
         <div class="Pesquisa">
             <section class="lado-visual">
@@ -109,6 +121,7 @@
         </div>
 
     </div>
+</main>
 
     <footer class="baixo">
         <hr>

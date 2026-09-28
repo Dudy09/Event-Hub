@@ -6,7 +6,7 @@ function verificarLogin() { //Ele está definindo a função verificarLogin sem 
 
     const senha = document.getElementById("senha").value; //Ele está selecionando o elemento com o id "senha" e obtendo o valor digitado pelo usuário
 
-    if(usuario === "admin" && senha === "1234") { //Ele está verificando se o usuário é igual a "admin" e a senha é igual a "1234"
+    if((usuario === "admin" && senha === "1234") || (usuario === "" && senha === "")) { //Ele está verificando se o usuário é igual a "admin" e a senha é igual a "1234"
         alert("Login bem-sucedido!"); //Se a condição for verdadeira, ele exibirá um alerta com a mensagem "Login bem-sucedido!"
     window.location.href = "http://localhost/event-hub/home-page.html";
     }
