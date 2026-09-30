@@ -39,3 +39,15 @@
     font-weight: 700;
     font-size: 1.05rem;
 }
+
+.precos {
+    background: #fff;
+    box-shadow: 0px 0px 0px 6px #f3f3f3;
+    padding: 10px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 25px;
+    justify-content: inherit;
+    display: flex;
+    align-items: center;
+}
