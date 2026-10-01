@@ -14,8 +14,8 @@
 
     <header class="site-header">
 
-        <button onclick="window.history.back()" style="background: none; border: none; width: 80px;"> 
-        <p style="font-size: 24px;"> ← </p>
+        <button onclick="window.location.href='index.html'" style="background: none; border: none; width: 120px;"> 
+        <p style="font-size: 24px;"> ← logoff </p>
         </button>
 
         <div class="logo-header">
@@ -42,7 +42,7 @@
                 </div>
 
                 <ul class="nav-links">
-                    <li><a href="#"><i class="far fa-user"></i> Conta</a></li>
+                    <li><a href="usuario/area-usuario.html"><i class="far fa-user"></i> Conta</a></li>
                     <li><a href="#"><i class="fas fa-home"></i> Início</a></li>
                     <li><a href="#"><i class="fas fa-list"></i> Todos</a></li>
                     <li><a href="#"><i class="fas fa-users"></i> Usuários</a></li>
@@ -74,7 +74,7 @@
         </div>
     </div>
 
-    <div class="eventos-container">
+    <div class="eventos-container" id="container-eventos">
 
         <div class="event-card">
             <div class="event-content">
@@ -83,6 +83,8 @@
                     <h1>Show do Coldplay</h1>
                     <p>Música - SP</p>
                     <p>12.set. 2025</p>
+                    <button type="button" class="mais-detalhes" onclick="verificar_evento(this)" id="Coldplay" value="Coldplay">Ver Detalhes</button>
+                    <input type="text" style="display: none;"></input>
                 </div>
             </div>
         </div>
@@ -94,6 +96,8 @@
                     <h1>Show do Coldplay</h1>
                     <p>Música - SP</p>
                     <p>12.set. 2025</p>
+                    <button type="button" class="mais-detalhes" onclick="verificar_evento(this)" id="Coldplay" value="Coldplay">Ver Detalhes</button>
+                    <input type="text" style="display: none;"></input>
                 </div>
             </div>
         </div>
@@ -105,6 +109,8 @@
                     <h1>Show do Coldplay</h1>
                     <p>Música - SP</p>
                     <p>12.set. 2025</p>
+                    <button type="button" class="mais-detalhes" onclick="verificar_evento(this)" id="Coldplay" value="Coldplay">Ver Detalhes</button>
+                    <input type="text" style="display: none;"></input>
                 </div>
             </div>
         </div>
@@ -116,6 +122,8 @@
                     <h1>Show do Coldplay</h1>
                     <p>Música - SP</p>
                     <p>12.set. 2025</p>
+                    <button type="button" class="mais-detalhes" onclick="verificar_evento(this)" id="Coldplay" value="Coldplay">Ver Detalhes</button>
+                    <input type="text" style="display: none;"></input>
                 </div>
             </div>
         </div>
@@ -161,5 +169,6 @@
     </footer>
 
     <script src="funcoes/testando.js"></script>
+    <script src="funcoes/pesquisa-home.js"></script>
 </body>
 </html>

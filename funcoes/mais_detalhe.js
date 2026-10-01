@@ -1,19 +1,3 @@
-/*
-function verificar_evento(id) {
-    if (typeof id === 'object' && id.id) {
-        id = id.id;
-    } else if (id instanceof HTMLElement) {
-        id = id.id;
-    }
-    
-    if (!id && window.event && window.event.currentTarget) {
-        id = window.event.currentTarget.id;
-    }
-
-    window.location.href = `detalhes.html?id=${id}`;
-}
-*/
-
 function verificar_evento(elementoOuId) {
     let id = '';
 

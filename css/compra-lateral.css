@@ -1,0 +1,674 @@
+.compra-overlay,
+.compra-sidebar,
+.compra-sidebar * {
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Fundo escurecido */
+.compra-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1200;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.compra-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Painel lateral */
+.compra-sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 440px;
+    max-width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    z-index: 1210;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    transform: translateX(100%);
+    visibility: hidden;
+    transition: transform 0.3s ease, visibility 0s linear 0.3s;
+}
+
+.compra-sidebar.active {
+    transform: translateX(0);
+    visibility: visible;
+    transition: transform 0.3s ease, visibility 0s linear 0s;
+}
+
+/* Topo com título e botão de fechar */
+.compra-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 24px 16px;
+    border-bottom: 1px solid #eef0f4;
+    flex-shrink: 0;
+}
+
+.compra-topo h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    color: #1a56db;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.compra-fechar {
+    background: none;
+    border: none;
+    padding: 4px;
+    font-size: 24px;
+    line-height: 1;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.compra-fechar:hover {
+    color: #1a56db;
+}
+
+/* Conteúdo com rolagem (as etapas) */
+.compra-corpo {
+    flex: 1;
+    overflow-y: auto;
+    padding: 24px;
+}
+
+/* Etapas (ingressos, pagamento e confirmação) */
+
+.compra-sidebar .steps-indicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.compra-sidebar .step-dot {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #e5e7eb;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    transition: all 0.3s;
+}
+
+.compra-sidebar .step-dot.active {
+    background: #1a56db;
+    color: white;
+}
+
+.compra-sidebar .step-dot.done {
+    background: #10b981;
+    color: white;
+}
+
+.compra-sidebar .step-line {
+    width: 40px;
+    height: 2px;
+    background: #e5e7eb;
+    transition: background 0.3s;
+}
+
+.compra-sidebar .step-line.done {
+    background: #10b981;
+}
+
+.compra-sidebar .ticket-event-summary {
+    display: flex;
+    gap: 20px;
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.compra-sidebar .ticket-event-summary img {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.compra-sidebar .ticket-event-summary-info h3 {
+    color: #1a56db;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.compra-sidebar .ticket-event-summary-info p {
+    color: #666;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 3px;
+}
+
+.compra-sidebar .ticket-event-summary-info p i {
+    color: #1a56db;
+    width: 16px;
+}
+
+.compra-sidebar .ticket-section-title {
+    color: #1a56db;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.compra-sidebar .ticket-section-title i {
+    font-size: 20px;
+}
+
+.compra-sidebar .ticket-types {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.compra-sidebar .ticket-type-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 18px 20px;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.compra-sidebar .ticket-type-card:hover {
+    border-color: #93c5fd;
+    background: #f0f7ff;
+}
+
+.compra-sidebar .ticket-type-card.selected {
+    border-color: #1a56db;
+    background: #eef4ff;
+}
+
+.compra-sidebar .ticket-type-info h4 {
+    color: #333;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+.compra-sidebar .ticket-type-info p {
+    color: #888;
+    font-size: 13px;
+}
+
+.compra-sidebar .ticket-type-price {
+    color: #1a56db;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.compra-sidebar .ticket-type-price span {
+    font-size: 13px;
+    font-weight: 400;
+    color: #888;
+}
+
+.compra-sidebar .quantity-selector {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.compra-sidebar .quantity-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    border: 2px solid #1a56db;
+    background: white;
+    color: #1a56db;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    font-weight: 700;
+}
+
+.compra-sidebar .quantity-btn:hover:not(:disabled) {
+    background: #1a56db;
+    color: white;
+}
+
+.compra-sidebar .quantity-btn:disabled {
+    border-color: #ddd;
+    color: #ddd;
+    cursor: not-allowed;
+    background: white;
+}
+
+.compra-sidebar .quantity-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #333;
+    min-width: 30px;
+    text-align: center;
+}
+
+.compra-sidebar .order-summary {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.compra-sidebar .order-summary h4 {
+    color: #1a56db;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.compra-sidebar .order-line {
+    display: flex;
+    justify-content: space-between;
+    color: #555;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.compra-sidebar .order-line.total {
+    border-top: 1px solid #e5e7eb;
+    padding-top: 12px;
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a56db;
+}
+
+.compra-sidebar .btn-finalizar {
+    background: linear-gradient(135deg, #1a56db 0%, #3b82f6 100%);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.compra-sidebar .btn-finalizar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(26, 86, 219, 0.35);
+}
+
+.compra-sidebar .btn-finalizar:active {
+    transform: translateY(0);
+}
+
+.compra-sidebar .btn-voltar-etapa {
+    background: white;
+    color: #1a56db;
+    border: 2px solid #1a56db;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 12px;
+}
+
+.compra-sidebar .btn-voltar-etapa:hover {
+    background: #f0f4ff;
+}
+
+.compra-sidebar .payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.compra-sidebar .payment-method {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px 20px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.compra-sidebar .payment-method:hover {
+    border-color: #93c5fd;
+    background: #f0f7ff;
+}
+
+.compra-sidebar .payment-method.selected {
+    border-color: #1a56db;
+    background: #eef4ff;
+}
+
+.compra-sidebar .payment-method-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    flex-shrink: 0;
+}
+
+.compra-sidebar .payment-method-icon.pix {
+    background: #d1fae5;
+    color: #10b981;
+}
+
+.compra-sidebar .payment-method-icon.debito {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.compra-sidebar .payment-method-icon.credito {
+    background: #fef3c7;
+    color: #f59e0b;
+}
+
+.compra-sidebar .payment-method-info h4 {
+    color: #333;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.compra-sidebar .payment-method-info p {
+    color: #888;
+    font-size: 12px;
+}
+
+.compra-sidebar .payment-method-radio {
+    margin-left: auto;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #d1d5db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.compra-sidebar .payment-method.selected .payment-method-radio {
+    border-color: #1a56db;
+    background: #1a56db;
+}
+
+.compra-sidebar .payment-method.selected .payment-method-radio::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.compra-sidebar .payment-details {
+    display: none;
+    margin-bottom: 25px;
+}
+
+.compra-sidebar .payment-details.show {
+    display: block;
+    animation: evFadeIn 0.3s ease;
+}
+
+@keyframes evFadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+    }
+
+.compra-sidebar .pix-box {
+    background: #f0fdf4;
+    border: 2px dashed #10b981;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+}
+
+.compra-sidebar .pix-box .pix-icon {
+    font-size: 48px;
+    color: #10b981;
+    margin-bottom: 15px;
+}
+
+.compra-sidebar .pix-box h4 {
+    color: #10b981;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.compra-sidebar .pix-box p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.compra-sidebar .pix-code {
+    background: white;
+    border: 1px solid #d1fae5;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: monospace;
+    font-size: 12px;
+    color: #333;
+    word-break: break-all;
+    margin-bottom: 15px;
+}
+
+.compra-sidebar .btn-copiar-pix {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.compra-sidebar .btn-copiar-pix:hover {
+    background: #059669;
+}
+
+.compra-sidebar .card-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.compra-sidebar .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.compra-sidebar .form-group label {
+    color: #555;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.compra-sidebar .form-group input,
+.compra-sidebar .form-group select {
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 15px;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s;
+    font-family: 'Poppins', sans-serif;
+}
+
+.compra-sidebar .form-group input:focus,
+.compra-sidebar .form-group select:focus {
+    border-color: #1a56db;
+}
+
+.compra-sidebar .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.compra-sidebar .card-brand {
+    position: absolute;
+    right: 15px;
+    top: 38px;
+    font-size: 22px;
+    color: #1a56db;
+    pointer-events: none;
+}
+
+.compra-sidebar .form-group.card-number-group {
+    position: relative;
+}
+
+.compra-sidebar .installments-info {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 10px;
+    padding: 12px 15px;
+    font-size: 13px;
+    color: #92400e;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.compra-sidebar .installments-info i {
+    font-size: 16px;
+}
+
+.compra-sidebar .ticket-success {
+    text-align: center;
+    padding: 40px 20px;
+    display: none;
+}
+
+.compra-sidebar .ticket-success.show {
+    display: block;
+}
+
+.compra-sidebar .success-icon {
+    width: 80px;
+    height: 80px;
+    background: #d1fae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 40px;
+    color: #10b981;
+    animation: evPopIn 0.4s ease;
+}
+
+@keyframes evPopIn {
+    0% { transform: scale(0); }
+    70% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+    }
+
+.compra-sidebar .ticket-success h3 {
+    color: #10b981;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.compra-sidebar .ticket-success p {
+    color: #666;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+.compra-sidebar .ticket-success .code {
+    background: #f0f7ff;
+    border: 2px dashed #1a56db;
+    border-radius: 12px;
+    padding: 15px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1a56db;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.compra-sidebar .success-details {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.compra-sidebar .success-details .order-line {
+    margin-bottom: 8px;
+}
+
+/* Ajustes para caber no menu lateral */
+.compra-sidebar .card-number-group {
+    position: relative;
+}
+
+.compra-sidebar .card-number-group input {
+    width: 100%;
+}
+
+.compra-sidebar .card-brand {
+    top: 50%;
+    transform: translateY(-50%);
+}

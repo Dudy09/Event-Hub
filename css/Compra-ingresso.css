@@ -1,0 +1,53 @@
+.conteudo-cadastro{
+    background: var(--white);
+    height: 100vh;
+}
+
+.teste {
+    width: 80%;
+    padding: 12px 40px 12px 16px;
+    font-size: 16px;
+    color: var(--indigo-botao);
+    font-weight: 700;
+    background-color: #fff;
+    border: 6px solid #e0e0e0;
+    border-radius: 20px;
+}
+
+.conteudo-centro{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 30px;
+  justify-content: space-evenly;
+}
+
+
+.grid-item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  text-align: center;
+}
+
+.botao_compra{
+    width: 220px;
+    height: 60px;
+    background: var(--botao);
+    color: var(--white);
+    border: none;
+    border-radius: 23px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 1.05rem;
+}
+
+.precos {
+    background: #fff;
+    box-shadow: 0px 0px 0px 6px #f3f3f3;
+    padding: 10px;
+    height: 60px;
+    border-radius: 10px;
+    font-size: 25px;
+    justify-content: inherit;
+    display: flex;
+    align-items: center;
+}
