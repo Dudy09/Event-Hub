@@ -1,0 +1,301 @@
+/* ==========================================================
+   EVENT HUB · Painel do cliente
+   Identidade: azul-marinho + azul vibrante + laranja (selo HUB)
+   Estrutura: 1 Base · 2 Layout · 3 Menu · 4 Topo · 5 Início
+              6 Ingressos · 7 Cartões · 8 Formulários · 9 Responsivo
+   ========================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+/* ---------- 1. BASE ---------- */
+:root{
+  --marinho:#0F1F4B;
+  --azul:#2563EB;
+  --azul-claro:#E8F0FE;
+  --laranja:#F59E0B;
+  --fundo:#F5F7FB;
+  --papel:#FFFFFF;
+  --linha:#E3E8F2;
+  --texto:#1C2540;
+  --suave:#6B7794;
+  --verde:#16A34A;
+  --raio:14px;
+  --sombra:0 2px 10px rgba(15,31,75,.06);
+  --fonte:'Plus Jakarta Sans',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--fundo);color:var(--texto);font:15px/1.55 var(--fonte);-webkit-font-smoothing:antialiased}
+h1,h2,h3,h4{color:var(--marinho);line-height:1.25}
+h1{font-size:1.35rem;font-weight:800}
+h2{font-size:1.15rem;font-weight:700;margin-bottom:1rem}
+h3{font-size:1.05rem;font-weight:700;margin:1.8rem 0 .9rem}
+h4{font-size:.95rem;font-weight:700}
+p{color:var(--suave)}
+:focus-visible{outline:3px solid var(--azul);outline-offset:2px}
+
+/* controles escondidos (continuam acessíveis pelo teclado) */
+body>input{position:absolute;opacity:0;pointer-events:none}
+
+/* ---------- 2. LAYOUT ---------- */
+.app{display:grid;grid-template-columns:250px 1fr;min-height:100vh}
+main{padding:1.8rem 2.2rem 3rem;width:100%;max-width:1040px}
+
+.pg{display:none}
+#t-inicio:checked~.app .p-inicio,
+#t-ingressos:checked~.app .p-ingressos,
+#t-cartoes:checked~.app .p-cartoes,
+#t-perfil:checked~.app .p-perfil{display:block;animation:entra .25s ease}
+@keyframes entra{from{opacity:0;transform:translateY(6px)}}
+
+/* ---------- 3. MENU LATERAL ---------- */
+.menu{
+  background:var(--papel);border-right:1px solid var(--linha);
+  padding:1.6rem 1rem;display:flex;flex-direction:column;gap:.3rem;
+  position:sticky;top:0;height:100vh;
+}
+.marca{display:flex;align-items:center;gap:.5rem;padding:0 .6rem 1.6rem}
+.marca b{font-size:1.2rem;font-weight:800;color:var(--marinho);letter-spacing:-.02em}
+.logo{
+  background:var(--laranja);color:var(--marinho);font-weight:800;font-size:.8rem;
+  padding:.2rem .5rem;border-radius:6px;
+}
+.menu label{
+  padding:.75rem 1rem;border-radius:10px;cursor:pointer;
+  color:var(--suave);font-weight:600;transition:background .2s,color .2s;
+}
+.menu label:hover{background:var(--fundo);color:var(--marinho)}
+#t-inicio:checked~.app .l-inicio,
+#t-ingressos:checked~.app .l-ingressos,
+#t-cartoes:checked~.app .l-cartoes,
+#t-perfil:checked~.app .l-perfil{background:var(--azul-claro);color:var(--azul)}
+#t-inicio:focus-visible~.app .l-inicio,
+#t-ingressos:focus-visible~.app .l-ingressos,
+#t-cartoes:focus-visible~.app .l-cartoes,
+#t-perfil:focus-visible~.app .l-perfil{outline:3px solid var(--azul)}
+
+/* ---------- 4. TOPO ---------- */
+.topo{display:flex;justify-content:space-between;align-items:center;margin-bottom:1.6rem}
+.topo p{font-size:.9rem}
+.avatar{
+  width:44px;height:44px;border-radius:50%;background:var(--marinho);color:#fff;
+  display:grid;place-items:center;font-weight:700;font-size:.9rem;
+}
+
+/* botões e links */
+.btn{
+  display:inline-block;background:var(--azul);color:#fff;border:0;
+  padding:.7rem 1.4rem;border-radius:10px;font:700 .9rem var(--fonte);
+  cursor:pointer;transition:background .2s,transform .15s;
+}
+.btn:hover{background:#1D4ED8;transform:translateY(-1px)}
+.link{color:var(--azul);font-weight:700;font-size:.85rem;cursor:pointer}
+.link:hover{text-decoration:underline}
+.mini{font-size:.8rem;font-weight:600}
+
+/* ---------- 5. INÍCIO ---------- */
+.destaque{
+  background:var(--marinho);color:#fff;border-radius:var(--raio);padding:1.6rem 1.8rem;
+  display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;
+  border-bottom:4px solid var(--laranja);
+}
+.destaque h2{color:#fff;font-size:1.6rem;margin:.2rem 0 .3rem}
+.destaque p{color:#B9C4E4}
+.destaque .btn{background:var(--laranja);color:var(--marinho)}
+.destaque .btn:hover{background:#FBBF24}
+
+.resumo{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.2rem 0 0}
+.resumo div{background:var(--papel);border:1px solid var(--linha);border-radius:var(--raio);padding:1rem 1.2rem;box-shadow:var(--sombra)}
+.resumo b{display:block;font-size:1.6rem;font-weight:800;color:var(--azul)}
+.resumo span{color:var(--suave);font-size:.85rem}
+
+/* "Perto de você": cards na paleta da marca (azul, marinho e laranja) */
+.sugestoes{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.sugestoes article{
+  background:var(--papel);border:1px solid var(--linha);border-radius:var(--raio);
+  overflow:hidden;box-shadow:var(--sombra);padding-bottom:1rem;cursor:pointer;
+  transition:transform .2s,box-shadow .2s,border-color .2s;
+}
+.sugestoes article:hover{transform:translateY(-3px);border-color:var(--azul);box-shadow:0 10px 24px rgba(37,99,235,.15)}
+
+/* área da imagem: degradê da marca + círculos suaves + faixa laranja */
+.sugestoes article i{
+  display:block;height:96px;margin-bottom:.9rem;position:relative;
+  background:
+    radial-gradient(circle at 85% 20%,rgba(255,255,255,.18) 0 38px,transparent 39px),
+    radial-gradient(circle at 70% 90%,rgba(255,255,255,.10) 0 52px,transparent 53px),
+    linear-gradient(135deg,var(--marinho),var(--azul));
+  border-bottom:3px solid var(--laranja);
+}
+.sugestoes article:nth-child(2) i{
+  background:
+    radial-gradient(circle at 85% 20%,rgba(255,255,255,.18) 0 38px,transparent 39px),
+    radial-gradient(circle at 70% 90%,rgba(255,255,255,.10) 0 52px,transparent 53px),
+    linear-gradient(135deg,var(--azul),#60A5FA);
+}
+.sugestoes article:nth-child(3) i{
+  background:
+    radial-gradient(circle at 85% 20%,rgba(255,255,255,.18) 0 38px,transparent 39px),
+    radial-gradient(circle at 70% 90%,rgba(255,255,255,.10) 0 52px,transparent 53px),
+    linear-gradient(135deg,var(--marinho),#1E3A8A);
+}
+
+.sugestoes h4,.sugestoes p{padding:0 1.1rem}
+.sugestoes p{font-size:.82rem;margin-top:.1rem}
+.sugestoes article::after{
+  content:"Ver evento";display:block;margin:.7rem 1.1rem 0;
+  color:var(--azul);font-size:.82rem;font-weight:700;
+}
+.sugestoes article:hover::after{text-decoration:underline}
+
+/* ---------- 6. INGRESSOS ---------- */
+.filtros{display:inline-flex;gap:.3rem;background:var(--papel);border:1px solid var(--linha);border-radius:12px;padding:4px;margin-bottom:1.2rem}
+.filtros label{padding:.45rem 1.1rem;border-radius:9px;cursor:pointer;font-weight:600;color:var(--suave)}
+#f-prox:checked~.app .filtros label:first-child,
+#f-ant:checked~.app .filtros label:last-child{background:var(--azul-claro);color:var(--azul)}
+
+.lista{display:none;flex-direction:column;gap:1rem}
+#f-prox:checked~.app .l-prox,
+#f-ant:checked~.app .l-ant{display:flex}
+
+.ingresso{
+  display:grid;grid-template-columns:96px 1fr 170px;align-items:stretch;
+  background:var(--papel);border:1px solid var(--linha);border-radius:var(--raio);
+  box-shadow:var(--sombra);overflow:hidden;position:relative;
+}
+.ingresso::before{content:"";background:linear-gradient(160deg,var(--c),var(--marinho))}
+.corpo{padding:1.1rem 1.3rem}
+.corpo h3{margin:.1rem 0 .3rem;font-size:1.1rem}
+.corpo p:not(.mini){font-size:.88rem}
+.canhoto{
+  padding:1rem;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.6rem;
+  border-left:1px solid var(--linha);
+}
+.canhoto .link{border:1.5px solid var(--azul);border-radius:10px;padding:.5rem 1rem;transition:background .2s}
+.canhoto .link:hover{background:var(--azul-claro);text-decoration:none}
+.passado{opacity:.8;filter:grayscale(.7)}
+
+.selo{display:inline-block;margin-top:.6rem;padding:.15rem .7rem;border-radius:999px;font-size:.75rem;font-weight:700;background:var(--fundo);color:var(--suave)}
+.selo.ok{background:#DCFCE7;color:var(--verde)}
+
+/* QR Code (padrão de demonstração: troque pela imagem real) */
+.qr-toggle{position:absolute;opacity:0}
+.qr{
+  width:84px;height:84px;border:6px solid #fff;outline:1px solid var(--linha);border-radius:8px;
+  background:conic-gradient(var(--marinho) 25%,transparent 0 50%,var(--marinho) 0 75%,transparent 0) 0 0/14px 14px,#fff;
+  filter:blur(7px);transition:filter .3s,transform .3s;
+}
+.qr-toggle:checked~.canhoto .qr{filter:none;transform:scale(1.3);margin:.7rem 0}
+.qr-toggle:checked~.canhoto .link{font-size:0}
+.qr-toggle:checked~.canhoto .link::after{content:"Ocultar QR";font-size:.85rem}
+.qr-toggle:focus-visible~.canhoto .link{outline:3px solid var(--azul)}
+
+/* ---------- 7. CARTÕES ---------- */
+.ajuda{margin:-.5rem 0 1.2rem}
+.cartoes{display:flex;gap:1rem;flex-wrap:wrap}
+.cartao{
+  width:300px;height:180px;border-radius:18px;color:#fff;padding:1.2rem;
+  display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;
+  position:relative;border:3px solid transparent;transition:transform .2s,box-shadow .2s;
+}
+.cartao:hover{transform:translateY(-4px)}
+.roxo{background:linear-gradient(135deg,#0F1F4B,#2563EB)}
+.rosa{background:linear-gradient(135deg,#1E3A8A,#F59E0B)}
+.bandeira{font-weight:800;font-size:1.05rem}
+.num{font-size:1.15rem;letter-spacing:.08em}
+.inf{display:flex;justify-content:space-between;font-size:.82rem}
+.inf em{font-style:normal}
+.principal{display:none;position:absolute;top:1rem;right:1rem;background:#fff;color:var(--marinho);font-size:.72rem;font-weight:700;padding:.15rem .6rem;border-radius:999px}
+#c1:checked~.app .roxo,
+#c2:checked~.app .rosa{border-color:#fff;box-shadow:0 0 0 3px var(--azul),0 12px 28px rgba(15,31,75,.3)}
+#c1:checked~.app .roxo .principal,
+#c2:checked~.app .rosa .principal{display:block}
+
+/* ---------- 8. FORMULÁRIOS ---------- */
+.novo{margin-top:1.4rem;background:var(--papel);border:1px solid var(--linha);border-radius:var(--raio);padding:1rem 1.2rem;box-shadow:var(--sombra)}
+.novo summary{cursor:pointer;font-weight:700;color:var(--azul)}
+.form{display:grid;gap:.9rem;margin-top:1rem}
+.form label{display:grid;gap:.3rem;font-size:.85rem;font-weight:600;color:var(--marinho)}
+.form input{
+  padding:.7rem .9rem;border:1.5px solid var(--linha);border-radius:10px;
+  background:var(--papel);color:var(--texto);font:inherit;transition:border-color .2s,box-shadow .2s;
+}
+.form input:focus{border-color:var(--azul);box-shadow:0 0 0 3px var(--azul-claro);outline:none}
+.form .btn{justify-self:start}
+.grade{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+
+.opcoes{display:grid;gap:.6rem;margin-bottom:1.4rem}
+.chave{display:flex;align-items:center;gap:.8rem;background:var(--papel);border:1px solid var(--linha);border-radius:12px;padding:.8rem 1rem;cursor:pointer;font-weight:500}
+.chave input{position:absolute;opacity:0}
+.chave i{width:42px;height:24px;border-radius:999px;background:var(--linha);position:relative;flex:none;transition:background .2s}
+.chave i::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.2);transition:transform .2s}
+.chave input:checked+i{background:var(--azul)}
+.chave input:checked+i::after{transform:translateX(18px)}
+.chave input:focus-visible+i{outline:3px solid var(--azul);outline-offset:2px}
+
+/* ---------- 3B. BARRA SUPERIOR (navegação do site) ---------- */
+:root{--topbar:68px}
+.topbar{
+  position:sticky;top:0;z-index:20;height:var(--topbar);
+  background:var(--papel);border-bottom:1px solid var(--linha);
+}
+.topbar .wrap{
+  max-width:1400px;height:100%;margin:0 auto;padding:0 1.5rem;
+  display:flex;align-items:center;gap:2rem;
+}
+/* logo em imagem (anula o estilo do selo "EH" do menu lateral) */
+.topbar .logo{display:block;height:40px;width:auto;padding:0;background:none;border-radius:0}
+
+/* links (anula o estilo do menu lateral, que usa a mesma classe .menu) */
+.topbar .menu{
+  position:static;height:auto;flex:1;flex-direction:row;align-items:center;
+  gap:.25rem;padding:0;background:none;border:0;
+}
+.topbar .menu a{
+  padding:.5rem .9rem;border-radius:10px;color:var(--suave);
+  font-weight:600;text-decoration:none;transition:background .2s,color .2s;
+}
+.topbar .menu a:hover{background:var(--fundo);color:var(--marinho)}
+.topbar .menu a[aria-current="page"]{background:var(--azul-claro);color:var(--azul)}
+.topbar .menu a[href$="cadastro.html"]{margin-left:.5rem;background:var(--azul);color:#fff}
+.topbar .menu a[href$="cadastro.html"]:hover{background:#1D4ED8;color:#fff}
+
+/* ações: notificações e menu */
+.top-actions{display:flex;gap:.5rem;margin-left:auto}
+.icon-btn{
+  width:40px;height:40px;display:grid;place-items:center;font-size:1rem;cursor:pointer;
+  background:var(--papel);border:1px solid var(--linha);border-radius:10px;
+  transition:background .2s,border-color .2s;
+}
+.icon-btn:hover{background:var(--azul-claro);border-color:var(--azul)}
+.burger,.burger::before,.burger::after{display:block;width:18px;height:2px;background:var(--marinho);border-radius:2px}
+.burger{position:relative}
+.burger::before,.burger::after{content:"";position:absolute;left:0}
+.burger::before{top:-6px}
+.burger::after{top:6px}
+
+/* o menu lateral passa a começar logo abaixo da barra superior */
+.app{min-height:calc(100vh - var(--topbar))}
+.app .menu{top:var(--topbar);height:calc(100vh - var(--topbar))}
+
+/* ---------- 9. RESPONSIVO ---------- */
+@media (max-width:820px){
+  .app{grid-template-columns:1fr;min-height:0}
+  .app .menu{top:auto;height:auto}
+  .topbar{height:auto}
+  .topbar .wrap{flex-wrap:wrap;gap:.4rem 1rem;padding:.6rem 1rem}
+  .topbar .logo{height:34px}
+  .topbar .menu{order:3;flex:none;width:100%;overflow-x:auto;white-space:nowrap;justify-content:flex-start;padding-bottom:.2rem}
+  .icon-btn[aria-label="Abrir menu"]{display:none}
+  .menu{
+    position:fixed;inset:auto 0 0 0;height:auto;flex-direction:row;justify-content:space-around;
+    padding:.4rem;border-right:0;border-top:1px solid var(--linha);z-index:5;
+  }
+  .marca{display:none}
+  .menu label{font-size:.75rem;padding:.6rem .4rem;text-align:center}
+  main{padding:1.2rem 1rem 6rem}
+  .resumo{grid-template-columns:1fr}
+  .ingresso{grid-template-columns:1fr}
+  .ingresso::before{height:70px}
+  .canhoto{border-left:0;border-top:1px solid var(--linha);flex-direction:row;justify-content:space-between}
+  .cartao{width:100%}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}

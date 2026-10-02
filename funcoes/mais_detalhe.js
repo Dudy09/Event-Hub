@@ -16,8 +16,7 @@ function verificar_evento(elementoOuId) {
 
 async function carregarEventos() {
     try {
-        const resposta = await fetch('/event-hub/dados/shows.json'); 
-        const eventos = await resposta.json();
+        const eventos = obterEventos();
         
         const container = document.getElementById('container-eventos');
         if (!container) return;

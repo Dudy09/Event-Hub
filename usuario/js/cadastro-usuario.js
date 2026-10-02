@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", () => {
             senha: form.elements["senha"].value
         };
 
-        // "Banco de dados" simulado em localStorage, no formato de uma lista
+        // localStorage, no formato de uma lista
         const clientes = JSON.parse(localStorage.getItem("cadastro-cliente")) || [];
 
         // Não deixa cadastrar o mesmo CPF ou e-mail duas vezes (o login depende disso)

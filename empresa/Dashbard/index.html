@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Meu painel · Event Hub</title>
+<link rel="stylesheet" href="style (5).css">
+</head>
+<body>
+
+  
+    <header class="topbar">
+        <div class="wrap">
+            <a href="/pages/inicio/index.html"><img src="logo-event-hub.png" alt="Event Hub" class="logo"></a>
+            <nav class="menu" aria-label="Principal">
+                <a href="/pages/inicio/index.html">Home</a>
+                <a href="/pages/inicio/eventos.html">Eventos</a>
+                <a href="#" aria-current="page">Sobre nós</a>
+                <a href="/pages/inicio/login.html">Entrar</a>
+                <a href="/pages/inicio/cadastro.html">Cadastro</a>
+                <a href="#">Contato</a>
+            </nav>
+            <div class="top-actions">
+                <button class="icon-btn" aria-label="Notificações">🔔</button>
+                <button class="icon-btn" aria-label="Abrir menu"><span class="burger"></span></button>
+            </div>
+        </div>
+    </header>
+
+<!-- Controles de navegação (CSS puro, sem JavaScript) -->
+<input type="radio" name="aba" id="t-inicio" checked>
+<input type="radio" name="aba" id="t-ingressos">
+<input type="radio" name="aba" id="t-cartoes">
+<input type="radio" name="aba" id="t-perfil">
+<input type="radio" name="filtro" id="f-prox" checked>
+<input type="radio" name="filtro" id="f-ant">
+<input type="radio" name="cartao" id="c1" checked>
+<input type="radio" name="cartao" id="c2">
+
+<div class="app">
+
+  <nav class="menu" aria-label="Menu principal">
+    <label for="t-inicio" class="l-inicio">Início</label>
+    <label for="t-ingressos" class="l-ingressos">Meus ingressos</label>
+    <label for="t-cartoes" class="l-cartoes">Cartões</label>
+    <label for="t-perfil" class="l-perfil">Meus dados</label>
+  </nav>
+
+  <main>
+    <header class="topo">
+      <div>
+        <h1>Olá,Igor Oliveira</h1>
+        <p>Você tem 3 ingressos para os próximos eventos.</p>
+      </div>
+      <div class="avatar" aria-hidden="true">IO</div>
+    </header>
+
+    <!-- INÍCIO -->
+    <section class="pg p-inicio">
+      <div class="destaque">
+        <div>
+          <p class="mini">Seu próximo evento · em 12 dias</p>
+          <h2>Festival da Sardinha M</h2>
+          <p>Sáb, 13 out · 16h · Arena Litoral, Praia Grande</p>
+        </div>
+        <label for="t-ingressos" class="btn">Ver ingresso</label>
+      </div>
+
+      <div class="resumo">
+        <div><b>3</b><span>ingressos ativos</span></div>
+        <div><b>1</b><span>eventos já vividos</span></div>
+        <div><b>R$ 120</b><span>em crédito</span></div>
+      </div>
+
+      <h3>Perto de você</h3>
+      <div class="sugestoes">
+        <article><i style="--c:#067CEA"></i><h4>Noite do Jazz</h4><p>20 out · Santos</p></article>
+        <article><i style="--c:#067CEA"></i><h4>Stand-up Orla</h4><p>27 out · Guarujá</p></article>
+        <article><i style="--c:#067CEA"></i><h4>Corrida do Mar</h4><p>03 nov · Praia Grande</p></article>
+      </div>
+    </section>
+
+    <!-- INGRESSOS -->
+    <section class="pg p-ingressos">
+      <h2>Meus ingressos</h2>
+      <div class="filtros">
+        <label for="f-prox">Próximos</label>
+        <label for="f-ant">Anteriores</label>
+      </div>
+
+      <div class="lista l-prox">
+        <article class="ingresso" style="--c:#067CEA">
+          <input type="checkbox" id="q1" class="qr-toggle">
+          <div class="corpo">
+            <p class="mini">Show · Festival</p>
+            <h3>Festival Maré Alta</h3>
+            <p>Sáb, 13 out · 16h</p>
+            <p>Arena Litoral · Pista Premium</p>
+            <span class="selo ok">Confirmado</span>
+          </div>
+          <div class="canhoto">
+            <div class="qr" aria-label="QR Code do ingresso"></div>
+            <label for="q1" class="link">Mostrar QR</label>
+          </div>
+        </article>
+
+        <article class="ingresso" style="--c:#067CEA">
+          <input type="checkbox" id="q2" class="qr-toggle">
+          <div class="corpo">
+            <p class="mini">Teatro</p>
+            <h3>Festa do chefe </h3>
+            <p>Sex, 20 out · 20h</p>
+            <p>Guarulhos-Sp</p>
+            <span class="selo ok">2 ingressos</span>
+          </div>
+          <div class="canhoto">
+            <div class="qr"></div>
+            <label for="q2" class="link">Mostrar QR</label>
+          </div>
+        </article>
+      </div>
+
+      <div class="lista l-ant">
+        <article class="ingresso passado" style="--c:#067CEA">
+          <div class="corpo">
+            <p class="mini">Show</p>
+            <h3>Estação Verão 2026</h3>
+            <p>Sáb, 18 jan · mc lele jp</p>
+            <span class="selo">Utilizado</span>
+          </div>
+          <div class="canhoto"><label class="link">Baixar recibo</label></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CARTÕES -->
+    <section class="pg p-cartoes">
+      <h2>Cartões cadastrados</h2>
+      <p class="ajuda">Escolha o cartão principal para pagar seus próximos ingressos.</p>
+
+      <div class="cartoes">
+        <label for="c1" class="cartao roxo">
+          <span class="bandeira">Visa</span>
+          <span class="num">•••• •••• •••• 4821</span>
+          <span class="inf"><em>Igor Oliveira</em><em>09/28</em></span>
+          <span class="principal">Principal</span>
+        </label>
+        <label for="c2" class="cartao rosa">
+          <span class="bandeira">Mastercard</span>
+          <span class="num">•••• •••• •••• 1190</span>
+          <span class="inf"><em>Igor Oliveira </em><em>03/27</em></span>
+          <span class="principal">Principal</span>
+        </label>
+      </div>
+
+      <details class="novo">
+        <summary>Adicionar novo cartão</summary>
+        <div class="form">
+          <label>Número do cartão<input type="text" inputmode="numeric" placeholder="0000 0000 0000 0000"></label>
+          <label>Nome impresso<input type="text" placeholder="Como está no cartão"></label>
+          <label>Validade<input type="text" placeholder="MM/AA"></label>
+          <label>Código<input type="password" placeholder="CVV"></label>
+          <button type="button" class="btn">Salvar cartão</button>
+        </div>
+      </details>
+    </section>
+
+    <!-- PERFIL -->
+    <section class="pg p-perfil">
+      <h2>Meus dados</h2>
+      <div class="form grade">
+        <label>Nome completo<input type="text" value="Igor Oliveira"></label>
+        <label>E-mail<input type="email" value="igor.oliveira@email.com"></label>
+        <label>Telefone<input type="tel" value="(13) 99999-0000"></label>
+        <label>Cidade<input type="text" value="Praia Grande, SP"></label>
+      </div>
+
+      <h3>Avisos</h3>
+      <div class="opcoes">
+        <label class="chave"><input type="checkbox" checked><i></i>Lembrar 24h antes do evento</label>
+        <label class="chave"><input type="checkbox" checked><i></i>Avisar quando um artista que sigo anunciar data</label>
+        <label class="chave"><input type="checkbox"><i></i>Receber ofertas por e-mail</label>
+      </div>
+      <button type="button" class="btn">Salvar alterações</button>
+    </section>
+  </main>
+</div>
+
+</body>
+</html>
