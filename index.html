@@ -1,70 +1,190 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Entrar - Event Hub</title>
+    <title>Sobre nós | Event Hub</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/sobre-eventhub.css">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/login.css">
 </head>
 <body>
-
     <header class="site-header">
         <div class="logo-header">
             <img src="assets/Tipografia-logo-1-com-ingresso-grudado.png" alt="Event Hub">
         </div>
-        <nav>
-            <a href="index.html">Início</a>
-            <a href="sobre_nos.html">Sobre</a>
-            <a href="#">Contatos</a>
-            <a href="#">Lojas da EventHub</a>
+        <nav class="menu">
+            <a href="home-page.html">Home</a>
+            <a href="pagina-eventos.html">Eventos</a>
+            <a href="index.html" class="ativo">Sobre nós</a>
+            <a href="login.html">Entrar</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="contato.html">Contato</a>
+            <img src="assets/icon_notificacao.png" style="width: 35px; height: 35px;">
+
+            <div id="overlay" class="overlay"></div>
+
+            <button id="menu-btn" class="btn-toggle">☰ Menu</button>
         </nav>
     </header>
 
-    <div class="conteudo-login">
-        <section class="lado-visual">
-            <div class="foto-fundo"></div>
-
-            <div class="logo">
-                <img src="assets/Tipografia-logo-1-com-ingresso-grudado.png" alt="Event Hub">
+    <main style="background: #fff">
+        <div class="pagina">
+            <div class="banner">
+                <img src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=1200&q=80" alt="Público em um evento">
             </div>
 
-            <p class="tagline">Grandes eventos,<br>emoções reais!</p>
-        </section>
+            <section class="quem-somos">
+                <h1>Quem somos</h1>
+                <p>
+                    O <strong>EventHub</strong> é uma plataforma que conecta pessoas
+                    com eventos, oferecendo uma experiência completa, segura e prática.
+                    Nosso objetivo é tornar o acesso à cultura, entretenimento e lazer
+                    mais fácil para todos.
+                </p>
+            </section>
 
-        <section class="lado-form">
-            <div class="card-login">
-                <h1>Entrar</h1>
-                <p class="subtitulo">Acesse sua conta para continuar</p>
+            <section class="mvv">
+                <div class="mvv-card">
+                    <div class="mvv-inner">
+                        <div class="mvv-front">
+                            <div class="mvv-icon">
+                                🎯
+                            </div>
+                            <h2>Missão</h2>
+                            <span>Passe o mouse</span>
+                        </div>
 
-                <div class="campo">
-                    <input type="text" id="usuario" placeholder="E-mail ou CPF" required>
+                        <div class="mvv-back">
+                            <h2>Missão</h2>
+                            <p>
+                                Democratizar o acesso a eventos de qualidade,
+                                conectando pessoas a experiências culturais,
+                                de entretenimento e lazer de forma simples,
+                                segura e acessível.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="campo">
-                    <input type="password" id="senha" placeholder="Senha" required>
-                    <button type="button" class="toggle-senha" id="btn-toggle-senha">
-                        
-                    </button>
+                <div class="mvv-card">
+                    <div class="mvv-inner">
+                        <div class="mvv-front">
+                            <div class="mvv-icon">
+                                👁
+                            </div>
+                            <h2>Visão</h2>
+                            <span>Passe o mouse</span>
+                        </div>
+
+                        <div class="mvv-back">
+                            <h2>Visão</h2>
+                            <p>
+                                Ser uma plataforma de referência na descoberta
+                                e participação em eventos no Brasil, aproximando
+                                pessoas, organizadores e novas experiências.
+                            </p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="linha-opcoes">
-                    <label class="lembrar">
-                        <input type="checkbox" id="lembrar">
-                        Lembrar de mim
-                    </label>
-                    <a href="#" class="link">Esqueceu a senha?</a>
+                <div class="mvv-card">
+                    <div class="mvv-inner">
+                        <div class="mvv-front">
+                            <div class="mvv-icon">
+                                🛡
+                            </div>
+                            <h2>Valores</h2>
+                            <span>Passe o mouse</span>
+                        </div>
+
+                        <div class="mvv-back">
+                            <h2>Valores</h2>
+                            <p>
+                                Valorizamos o respeito, a inovação, a segurança,
+                                a inclusão e a transparência, buscando oferecer
+                                uma experiência positiva para todos os usuários.
+                            </p>
+                        </div>
+                    </div>
                 </div>
+            </section>
 
-                <button type="button" class="btn-entrar" onclick="verificarLogin()">Entrar</button>
+            <section class="equipe">
+                <h1>Nossa equipe</h1>
 
-                <p class="rodape-card">Não tem uma conta? <a href="cadastro.html" class="link">Cadastre-se</a></p>
-            </div>
-        </section>
-    </div>
+                <div class="membros">
+                    <div class="membro">
+                        <div class="foto">
+                            <img src="https://i.pravatar.cc/150?img=47" alt="Ana Silva">
+                        </div>
+                        <strong>Ana Silva</strong>
+                        <span>CEO</span>
+                    </div>
 
-    <script src="funcoes/testando.js"></script>
+                    <div class="membro">
+                        <div class="foto">
+                            <img src="https://i.pravatar.cc/150?img=12" alt="Bruno Costa">
+                        </div>
+                        <strong>Bruno Costa</strong>
+                        <span>CTO</span>
+                    </div>
+
+                    <div class="membro">
+                        <div class="foto">
+                            <img src="https://i.pravatar.cc/150?img=32" alt="Carla Mendes">
+                        </div>
+                        <strong>Carla Mendes</strong>
+                        <span>Marketing</span>
+                    </div>
+
+                    <div class="membro">
+                        <div class="foto">
+                            <img src="https://i.pravatar.cc/150?img=11" alt="Rafael Lima">
+                        </div>
+                        <strong>Rafael Lima</strong>
+                        <span>Suporte</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="localizacao">
+                <h1>Encontre eventos perto de você</h1>
+                <p>
+                    Em breve, você poderá encontrar eventos próximos
+                    utilizando sua localização.
+                </p>
+
+                <div class="mapa">
+                    <div class="mapa-conteudo">
+                        <span class="mapa-icone">📍</span>
+                        <strong>Localização</strong>
+                        <span>
+                            Espaço reservado para a API de geolocalização
+                        </span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="contato">
+                <h1>Entre em contato conosco</h1>
+                <p>
+                    Ficou com alguma dúvida ou precisa de ajuda?
+                    Nossa equipe está pronta para atender você.
+                </p>
+                <a href="#" class="botao-contato">
+                    Fale conosco
+                </a>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>
+            &copy; 2026 Event Hub. Todos os direitos reservados.
+        </p>
+    </footer>
 </body>
 </html>

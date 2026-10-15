@@ -82,10 +82,8 @@
     background: none;
     border: none;
     color: var(--indigo-escuro);
-    padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
-    margin: 20px;
     transition: background-color 0.3s ease;
 }
 

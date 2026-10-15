@@ -110,3 +110,17 @@ body {
         flex-wrap: wrap;
     }
 }
+
+.btn-toggle {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--indigo-escuro);
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}

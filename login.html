@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar - Event Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="logo-header">
+            <img src="assets/Tipografia-logo-1-com-ingresso-grudado.png" alt="Event Hub">
+        </div>
+        <nav class="menu">
+            <a href="home-page.html">Home</a>
+            <a href="pagina-eventos.html">Eventos</a>
+            <a href="index.html" class="ativo">Sobre nós</a>
+            <a href="login.html">Entrar</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="contato.html">Contato</a>
+            <img src="assets/icon_notificacao.png" style="width: 35px; height: 35px;">
+
+            <div id="overlay" class="overlay"></div>
+
+            <button id="menu-btn" class="btn-toggle">☰ Menu</button>
+        </nav>
+    </header>
+
+    <div class="conteudo-login">
+        <section class="lado-visual">
+            <div class="foto-fundo"></div>
+
+            <div class="logo">
+                <img src="assets/Tipografia-logo-1-com-ingresso-grudado.png" alt="Event Hub">
+            </div>
+
+            <p class="tagline">Grandes eventos,<br>emoções reais!</p>
+        </section>
+
+        <section class="lado-form">
+            <div class="card-login">
+                <h1>Entrar</h1>
+                <p class="subtitulo">Acesse sua conta para continuar</p>
+
+                <div class="campo">
+                    <input type="text" id="usuario" placeholder="E-mail ou CPF" required>
+                </div>
+
+                <div class="campo">
+                    <input type="password" id="senha" placeholder="Senha" required>
+                    <button type="button" class="toggle-senha" id="btn-toggle-senha">
+                        
+                    </button>
+                </div>
+
+                <div class="linha-opcoes">
+                    <label class="lembrar">
+                        <input type="checkbox" id="lembrar">
+                        Lembrar de mim
+                    </label>
+                    <a href="#" class="link">Esqueceu a senha?</a>
+                </div>
+
+                <button type="button" class="btn-entrar" onclick="verificarLogin()">Entrar</button>
+
+                <p class="rodape-card">Não tem uma conta? <a href="cadastro.html" class="link">Cadastre-se</a></p>
+            </div>
+        </section>
+    </div>
+
+    <script src="funcoes/testando.js"></script>
+</body>
+</html>

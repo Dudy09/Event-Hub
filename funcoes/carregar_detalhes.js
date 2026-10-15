@@ -8,13 +8,7 @@ async function carregarDetalhesDoEvento() {
             return;
         }
 
-        // Adicionado timestamp (?t=...) para prevenir problemas de cache no JSON
-        const resposta = await fetch(`/event-hub/dados/shows.json?t=${Date.now()}`);
-        if (!resposta.ok) {
-            throw new Error(`Erro ao buscar o arquivo JSON: ${resposta.status}`);
-        }
-
-        const eventos = await resposta.json();
+        const eventos = obterEventos();
         const evento = eventos.find(e => e.id === idEvento);
 
         if (!evento) {

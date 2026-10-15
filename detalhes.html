@@ -6,7 +6,8 @@
     <title>Detalhes do Evento</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/detalhes.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/compra-modal.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     
@@ -39,7 +40,7 @@
                             <h1 id="detalhe-preco">R$ 0,00</h1>
                         </div>
                         <div class="info_botao">
-                            <button class="botao_compra">Comprar Ingressos</button>
+                            <button type="button" class="botao_compra" id="botao-comprar">Comprar Ingressos</button>
                         </div>
                     </section>
                 </section>
@@ -102,6 +103,26 @@
         </main>
     </main>
 
-    <script src="funcoes/carregar_detalhes.js" defer></script>
+    <script src="funcoes/eventos_storage.js"></script>
+    <script src="funcoes/carregar_detalhes.js"></script>
+    <script src="funcoes/compra-modal.js"></script>
+    <script>
+        // Abre o modal de compra com os dados que o carregar_detalhes.js colocou na página
+        document.getElementById("botao-comprar").addEventListener("click", function () {
+            const texto = function (id) {
+                const el = document.getElementById(id);
+                return el ? el.textContent.trim() : "";
+            };
+            const imagem = document.getElementById("detalhe-imagem-fundo");
+
+            abrirCompraModal({
+                titulo: texto("detalhe-nome"),
+                data: texto("detalhe-data-hora"),
+                imagem: imagem ? (imagem.getAttribute("src") || "") : "",
+                local: texto("detalhe-local").replace(/^Local:\s*/i, ""),
+                precoBase: parseFloat(texto("detalhe-preco").replace(/[^\d,]/g, "").replace(",", ".")) || 0
+            });
+        });
+    </script>
 </body>
 </html>

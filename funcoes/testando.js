@@ -14,9 +14,9 @@ async function verificarLogin() {
     const senha = document.getElementById("senha").value;
 
     // 2. Conta de teste (pode apagar essas linhas quando não precisar mais)
-    if (usuario === "admin" && senha === "1234") {
+    if ((usuario === "" && senha === "") || (usuario === "admin" && senha === "1234")) {
         alert("Login bem-sucedido!");
-        window.location.href = "http://localhost/event-hub/home-page.html";
+        window.location.href = "http://localhost/event-hub/usuario/area-usuario.html";
         return;
     }
 

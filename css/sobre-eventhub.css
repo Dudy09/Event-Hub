@@ -1,0 +1,579 @@
+:root {
+    --azul: #1468a8;
+    --azul-escuro: #124f7f;
+    --azul-claro: #eaf4fb;
+    --texto: #26384a;
+    --cinza: #71808e;
+    --fundo: #f6f9fc;
+    --branco: #ffffff;
+    --borda: #e5ebf0;
+    --fonte: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+}
+
+
+/* CONFIGURAÇÕES GERAIS */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: var(--fonte);
+    font-size: 17px;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* CABEÇALHO */
+
+.topbar {
+    background: #ffffff;
+    border-bottom: 1px solid #edf1f5;
+}
+
+.topbar .wrap {
+    max-width: 1120px;
+    height: 75px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: auto;
+    height: 120px;
+}
+
+.menu {
+    display: none;
+    margin-left: auto;
+    gap: 24px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--texto);
+}
+
+.menu a:hover,
+.menu .ativo {
+    color: var(--azul);
+}
+
+.top-actions {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.icon-btn {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.burger,
+.burger::before,
+.burger::after {
+    width: 19px;
+    height: 2px;
+    background: #26384a;
+    border-radius: 3px;
+    display: block;
+    position: relative;
+}
+
+.burger::before,
+.burger::after {
+    content: "";
+    position: absolute;
+    left: 0;
+}
+
+.burger::before {
+    top: -6px;
+}
+
+.burger::after {
+    top: 6px;
+}
+
+
+/* ÁREA PRINCIPAL */
+
+main {
+    padding: 18px 10px 30px;
+}
+
+.pagina {
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 16px;
+    box-shadow: 0 2px 8px rgba(30, 70, 100, .05);
+}
+
+
+/* BANNER */
+
+.banner {
+    width: 100%;
+    height: 125px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 18px;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/* QUEM SOMOS */
+
+.quem-somos {
+    padding: 0 2px;
+}
+
+.quem-somos h1 {
+    margin: 0 0 8px;
+    color: var(--azul-escuro);
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.quem-somos p {
+    margin: 0;
+    color: var(--cinza);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.quem-somos strong {
+    color: var(--azul);
+}
+
+
+/* MISSÃO, VISÃO E VALORES */
+
+.mvv {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 22px;
+}
+
+.mvv-card {
+    height: 220px;
+    perspective: 1000px;
+}
+
+.mvv-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.mvv-card:hover .mvv-inner {
+    transform: rotateY(180deg);
+}
+
+.mvv-front,
+.mvv-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 1px solid #e8edf2;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(30, 70, 100, .07);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+.mvv-front {
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mvv-icon {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 12px;
+    border-radius: 50%;
+    background: var(--azul);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.mvv-front h2 {
+    margin: 0 0 8px;
+    color: var(--texto);
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.mvv-front span {
+    color: var(--cinza);
+    font-size: 11px;
+}
+
+.mvv-back {
+    background: var(--azul);
+    color: #ffffff;
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transform: rotateY(180deg);
+}
+
+.mvv-back h2 {
+    margin: 0 0 12px;
+    font-size: 19px;
+}
+
+.mvv-back p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* NOSSA EQUIPE */
+
+.equipe {
+    margin-top: 28px;
+}
+
+.equipe h1 {
+    margin: 0 0 16px;
+    color: var(--azul-escuro);
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.membros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 8px;
+}
+
+.membro {
+    text-align: center;
+}
+
+.foto {
+    width: 76px;
+    height: 76px;
+    margin: 0 auto 8px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #eaf2f8;
+    border: 4px solid #eef4f8;
+}
+
+.foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.membro strong {
+    display: block;
+    color: var(--texto);
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.membro span {
+    display: block;
+    margin-top: 3px;
+    color: var(--cinza);
+    font-size: 11px;
+}
+
+
+/* GEOLOCALIZAÇÃO */
+
+.localizacao {
+    margin-top: 30px;
+}
+
+.localizacao h1 {
+    margin: 0 0 8px;
+    color: var(--azul-escuro);
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.localizacao > p {
+    margin: 0 0 14px;
+    color: var(--cinza);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.mapa {
+    width: 100%;
+    min-height: 160px;
+    border: 1px solid #dce8f0;
+    border-radius: 10px;
+    background: var(--azul-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.mapa-conteudo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    padding: 20px;
+}
+
+.mapa-icone {
+    font-size: 32px;
+}
+
+.mapa-conteudo strong {
+    color: var(--azul-escuro);
+    font-size: 16px;
+}
+
+.mapa-conteudo span:last-child {
+    color: var(--cinza);
+    font-size: 12px;
+}
+
+
+/* ENTRE EM CONTATO */
+
+.contato {
+    margin-top: 30px;
+    padding: 25px 18px;
+    background: var(--azul-claro);
+    border-radius: 10px;
+    text-align: center;
+}
+
+.contato h1 {
+    margin: 0 0 8px;
+    color: var(--azul-escuro);
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.contato p {
+    margin: 0 auto 18px;
+    max-width: 550px;
+    color: var(--cinza);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.botao-contato {
+    display: inline-block;
+    padding: 11px 24px;
+    background: var(--azul);
+    color: #ffffff;
+    border-radius: 7px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.botao-contato:hover {
+    background: var(--azul-escuro);
+}
+
+
+/* RODAPÉ */
+
+.footer {
+    margin-top: 5px;
+    padding: 24px 10px;
+    background: var(--azul);
+    color: #ffffff;
+    text-align: center;
+    font-size: 11px;
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+/* DESKTOP */
+
+@media (min-width: 900px) {
+
+    .menu {
+        display: flex;
+    }
+
+    .top-actions {
+        margin-left: 25px;
+    }
+
+    main {
+        padding: 35px 20px;
+    }
+
+    .pagina {
+        max-width: 900px;
+        padding: 25px;
+        border-radius: 10px;
+    }
+
+    .banner {
+        height: 230px;
+    }
+
+    .quem-somos h1 {
+        font-size: 26px;
+    }
+
+    .quem-somos p {
+        font-size: 16px;
+    }
+
+    /* CARDS */
+
+    .mvv {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    .mvv-card {
+        height: 240px;
+    }
+
+    .mvv-front h2 {
+        font-size: 20px;
+    }
+
+    .mvv-back {
+        padding: 25px 18px;
+    }
+
+    .mvv-back h2 {
+        font-size: 20px;
+    }
+
+    .mvv-back p {
+        font-size: 14px;
+    }
+
+    /* EQUIPE */
+
+    .equipe h1 {
+        font-size: 24px;
+    }
+
+    .membros {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .foto {
+        width: 90px;
+        height: 90px;
+    }
+
+    .membro strong {
+        font-size: 13px;
+    }
+
+    .membro span {
+        font-size: 11px;
+    }
+
+    /* LOCALIZAÇÃO */
+
+    .localizacao h1 {
+        font-size: 24px;
+    }
+
+    .localizacao > p {
+        font-size: 15px;
+    }
+
+    .mapa {
+        min-height: 210px;
+    }
+
+    .mapa-conteudo strong {
+        font-size: 18px;
+    }
+
+    .mapa-conteudo span:last-child {
+        font-size: 13px;
+    }
+
+    /* CONTATO */
+
+    .contato {
+        padding: 30px;
+    }
+
+    .contato h1 {
+        font-size: 24px;
+    }
+
+    .contato p {
+        font-size: 15px;
+    }
+
+    .botao-contato {
+        font-size: 14px;
+        padding: 12px 28px;
+    }
+
+}

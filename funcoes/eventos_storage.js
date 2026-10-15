@@ -1,0 +1,119 @@
+const CHAVE_EVENTOS = 'eventhub_shows';
+
+// Eventos padrão (conteúdo do antigo shows.json).
+// Só são usados na primeira vez, para popular o localStorage.
+const EVENTOS_PADRAO = [
+    {
+        "id": "Coldplay",
+        "nome": "Show do Coldplay",
+        "valor_botao": "Coldplay",
+        "categoria_principal": "Música",
+        "informacoes": {
+            "informacoes_local": {
+                "cidade": "São Paulo",
+                "estado": "São Paulo - SP",
+                "local": "Nubank Parque"
+            },
+            "informacoes_data": {
+                "data_reduzida": "12.set. 2025",
+                "data_completo": "12 de Setembro de 2025",
+                "horario": "21:00"
+            },
+            "informacoes_gerais": {
+                "duracao": "3h.",
+                "classificacao": "16 anos.",
+                "descricao": "A banda Coldplay retorna ao Brasil com a sua nova turnê, trazendo um show inesquecível e grandes sucessos."
+            }
+        },
+        "tags": {
+            "primeira_tag": "Música",
+            "segunda_tag": "Festival",
+            "terceira_tag": "teste",
+            "quarta_tag": "",
+            "quinta_tag": ""
+        },
+        "ingressos": [
+            { "setor": "Pista Premium", "preco": 800 },
+            { "setor": "Pista Comum", "preco": 450 },
+            { "setor": "Cadeira Superior", "preco": 250 },
+            { "setor": "Meia Entrada", "preco": 180 }
+        ],
+        "organizador": {
+            "nome": "Live Nation",
+            "link": "ver_empresa.html",
+            "estrelas": "4.8",
+            "avaliacoes": "12 avaliações"
+        },
+        "imagem": {
+            "imagem_exibicao": "http://localhost/event-hub/assets/Fundo-de-pesquisa-inteiro.png",
+            "imagem_fundo": "assets/Background_coldplay_reduzido.png"
+        }
+    },
+    {
+        "id": "Hotwork",
+        "nome": "Show do Hotwork",
+        "valor_botao": "Hotwork",
+        "categoria_principal": "Música",
+        "informacoes": {
+            "informacoes_local": {
+                "cidade": "Rio de Janeiro",
+                "estado": "Rio de Janeiro - RJ",
+                "local": "Itaú Arena"
+            },
+            "informacoes_data": {
+                "data_reduzida": "25.out. 2025",
+                "data_completo": "25 de Outubro de 2025",
+                "horario": "22:00"
+            },
+            "informacoes_gerais": {
+                "duracao": "2h30.",
+                "classificacao": "18 anos.",
+                "descricao": "A banda Hotwork incendeia o palco em sua primeira passagem pelo Brasil, prometendo uma performance calorosa cheia de energia e ritmo contagiante."
+            }
+        },
+        "tags": {
+            "primeira_tag": "Música",
+            "segunda_tag": "Solo",
+            "terceira_tag": "teste",
+            "quarta_tag": "",
+            "quinta_tag": ""
+        },
+        "ingressos": [
+            { "setor": "Pista Premium", "preco": 750 },
+            { "setor": "Pista Comum", "preco": 400 },
+            { "setor": "Cadeira Superior", "preco": 220 },
+            { "setor": "Meia Entrada", "preco": 150 }
+        ],
+        "organizador": {
+            "nome": "Live Nation",
+            "link": "ver_empresa.html",
+            "estrelas": "4.5",
+            "avaliacoes": "8 avaliações"
+        },
+        "imagem": {
+            "imagem_exibicao": "http://localhost/event-hub/assets/Fundo-de-pesquisa-inteiro.png",
+            "imagem_fundo": "assets/Background_hotwork_reduzido.png"
+        }
+    }
+];
+
+function salvarEventos(lista) {
+    try {
+        localStorage.setItem(CHAVE_EVENTOS, JSON.stringify(lista));
+    } catch (erro) {
+        console.error('Erro ao salvar eventos no localStorage:', erro);
+    }
+}
+
+function obterEventos() {
+    try {
+        const salvo = localStorage.getItem(CHAVE_EVENTOS);
+        if (salvo) return JSON.parse(salvo);
+    } catch (erro) {
+        console.error('Erro ao ler eventos do localStorage:', erro);
+    }
+
+    // Primeira vez (ou dado corrompido): popula com o padrão
+    salvarEventos(EVENTOS_PADRAO);
+    return EVENTOS_PADRAO;
+}
